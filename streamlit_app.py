@@ -300,7 +300,7 @@ if selected == 6:
             "Linear Regression": LinearRegression(),
             "Decision Tree": DecisionTreeRegressor(),
             "AdaBoost": AdaBoostRegressor(),
-            "XGBoost": XGBRegressor()
+            #"XGBoost": XGBRegressor()
         }
 
         # Train the models
