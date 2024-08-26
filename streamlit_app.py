@@ -279,6 +279,9 @@ if selected == 6:
         numeric_features = data.select_dtypes(include=['int64', 'float64']).columns
         categorical_features = data.select_dtypes(include=['object']).columns
 
+        numeric_features = [col for col in numeric_features if col != target_column]
+        categorical_features = [col for col in categorical_features if col != target_column]
+
         numeric_transformer = Pipeline(steps=[
             ('imputer', SimpleImputer(strategy='median')),
         ])
@@ -306,20 +309,25 @@ if selected == 6:
         # Train the models
         X = data.drop(columns=[target_column])
         y = data[target_column]
-        for model_name, model in models.items():
-            pipeline = Pipeline(steps=[('preprocessor', preprocessor),
-                                       ('model', model)])
-            pipeline.fit(X, y)
 
-            # Make predictions
-            predictions = pipeline.predict(X)
+        # Check if the target column is numeric
+        if pd.api.types.is_numeric_dtype(y):
+            for model_name, model in models.items():
+                pipeline = Pipeline(steps=[('preprocessor', preprocessor),
+                                           ('model', model)])
+                pipeline.fit(X, y)
 
-            # Display the predictions
-            st.write(f"{model_name} Predictions:")
-            st.write(predictions)
+                # Make predictions
+                predictions = pipeline.predict(X)
 
-            # Evaluate the model
-            r2 = r2_score(y, predictions)
-            mse = mean_squared_error(y, predictions)
-            st.write(f"{model_name} R2 Score:", r2)
-            st.write(f"{model_name} Mean Squared Error:", mse)
+                # Display the predictions
+                st.write(f"{model_name} Predictions:")
+                st.write(predictions)
+
+                # Evaluate the model
+                r2 = r2_score(y, predictions)
+                mse = mean_squared_error(y, predictions)
+                st.write(f"{model_name} R2 Score:", r2)
+                st.write(f"{model_name} Mean Squared Error:", mse)
+        else:
+            st.error("The target column must be numeric.")
