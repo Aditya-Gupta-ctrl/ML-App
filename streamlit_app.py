@@ -10,7 +10,8 @@ from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import DecisionTreeRegressor, AdaBoostRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import AdaBoostRegressor
 from xgboost import XGBRegressor
 
 
