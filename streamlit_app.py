@@ -1,387 +1,125 @@
 import streamlit as st
 import streamlit_antd_components as sac
-import os
-import io
-import pickle
-import pandas as pd
-import numpy as np
-from sklearn.metrics import r2_score, mean_squared_error
-from sklearn.linear_model import LinearRegression
-from sklearn.impute import SimpleImputer
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import LabelEncoder
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import AdaBoostRegressor
+
 
 
 # Set page config
 st.set_page_config(
-    page_title="ML model",
-    page_icon=":rocket:",
+    page_title="chik dabak dam dam",
+    page_icon=":book:",
     layout="wide",
 )
 
-
-# Create a session state variable to store the uploaded file
-if 'uploaded_file' not in st.session_state:
-    st.session_state.uploaded_file = None
-
-
-
-#Menu Bar
-with st.sidebar:
-    selected = sac.menu([
-        sac.MenuItem('home', icon='house-fill'),
-        sac.MenuItem(type='divider'),
-        sac.MenuItem('products', icon='box-fill', children=[
-            sac.MenuItem('Data Ingestion'),           
-            sac.MenuItem('Data Transformation', icon='', description=''),
-            sac.MenuItem('Auto Train ML Model', icon=''),
-            sac.MenuItem('Freeze the Learning', icon=''),
-        ]),
-        sac.MenuItem('disabled', disabled=True),
-        sac.MenuItem(type='divider'),
-        sac.MenuItem('link', type='group', children=[
-            sac.MenuItem('@1', icon='', href=''),
-            sac.MenuItem('@2', icon='', href=''),
-        ]),
-    ], size='lg', variant='left-bar', color='grape', open_all=True, return_index=True)
+#Tab Menu
+selecteds = sac.tabs([
+    sac.TabsItem(label='Home', tag=""),    
+    sac.TabsItem(label='Python', icon=''),
+    sac.TabsItem(label='C', icon=''),
+    sac.TabsItem(label='C++', icon=''),
+    sac.TabsItem(label='Java', icon=''),
+	sac.TabsItem(icon='google',tag="GPT"),
+], align='wide', size='lg' , color='grape', use_container_width=True, return_index=True)
 
 
-#Home bar
-if selected == 0:
-    st.header("Welcome to ML Model")
 
-    st.write("This is a machine learning model that allows you to upload your dataset, select the target column, and train a simple linear regression model. The model will then make predictions on the uploaded data.")
+#Home Section
+if selecteds == 0:
+    st.header("Welcome to Chik Dabak Dam Dam")
+    st.subheader("Directly go the python for learning {others things are work in progress}")
+    st.write("Backchodi maat kar lawde kaam chal raha hai na")
 
-    st.subheader("Features")
 
-    st.write("The following features are available in this model:")
 
-    features = [
-        "Data Ingestion: Upload your dataset in CSV or Excel format",
-        "Target Column Selection: Select the column you want to predict",
-        "Model Training: Train a simple linear regression model on your data",
-        "Predictions: Get predictions on your uploaded data"
-    ]
 
-    for feature in features:
-        st.write(f"* {feature}")
 
-    st.subheader("How it Works")
-
-    st.write("Here's a step-by-step guide on how to use this model:")
-
-    steps = [
-        "Upload your dataset using the file uploader",
-        "Select the target column from the dropdown menu",
-        "Click the 'Train Model' button to train the model",
-        "Get predictions on your uploaded data"
-    ]
-
-    for step in steps:
-        st.write(f"* {step}")
-
-    st.subheader("Benefits")
-
-    st.write("Using this model, you can:")
-
-    benefits = [
-        "Quickly upload and analyze your dataset",
-        "Select the target column with ease",
-        "Train a simple linear regression model with minimal effort",
-        "Get accurate predictions on your uploaded data"
-    ]
-
-    for benefit in benefits:
-        st.write(f"* {benefit}")
+#Python Tab Section
+if selecteds == 1:
+    with st.sidebar:
+        selected = sac.menu([
+            sac.MenuItem('Introduction', icon='house-fill'),
+            sac.MenuItem(type='divider'),
+            sac.MenuItem('Basics', icon='box-fill', children=[
+                sac.MenuItem('First Program'),
+                sac.MenuItem('Data Types'),           
+                sac.MenuItem('Variable'),
+                sac.MenuItem('Operations'),
+                sac.MenuItem('Control Flow'),
+                sac.MenuItem('Function'),
+                sac.MenuItem('Operations'),
+                sac.MenuItem('Operations'),
+                sac.MenuItem('Operations'),
+            ]),
+            sac.MenuItem('Cheatsheet', icon='table'),
+            sac.MenuItem(type='divider'),
+            sac.MenuItem('link', type='group', children=[
+                sac.MenuItem('Download Python', icon='download', description='Latest Version', href='https://www.python.org/downloads/'),
+                sac.MenuItem('Download VS Code', icon='terminal', href='https://code.visualstudio.com/download'),
+            ]),
+        ], size='lg', variant='left-bar', color='grape', open_all=True, return_index=True)
     
-uploaded_file = None
-
-# Data Ingestion tab
-if selected == 3:
-    st.header("Data Ingestion")
-    
-    # Create a file uploader
-    uploaded_file = st.file_uploader("Choose a file", type=["csv", "xlsx"], accept_multiple_files=False)
-    
-    if uploaded_file:
-        # Store the uploaded file in the session state
-        st.session_state.uploaded_file = uploaded_file
+    if selected == 0:
+        st.header("Welcome to Python")
+        # App title
+        st.title("Python Overview")
         
-        # Create the uploads directory if it doesn't exist
-        uploads_dir = "uploads"
-        if not os.path.exists(uploads_dir):
-            os.makedirs(uploads_dir)
-    
-        # Handle the uploaded file
-        file_path = os.path.join(uploads_dir, uploaded_file.name)
-        with open(file_path, "wb") as f:
-            f.write(uploaded_file.read())
-        st.success("File uploaded successfully!")
-    
-        # Get the file name and path
-        file_name = uploaded_file.name
-        file_path = file_path
-    
-        # Display the file name and path
-        st.write(f"File name: {file_name}")
-        st.write(f"File path: {file_path}")
-    
-        # Load the uploaded data
-        if file_name.endswith('.csv'):
-            data = pd.read_csv(file_path)
-        elif file_name.endswith('.xlsx'):
-            data = pd.read_excel(file_path)
-    
-        # Display the data dimensions
-        st.write(f"Data shape: {data.shape}")
+        # Introduction
+        st.markdown("""
+        - Python was designed and implemented by Guido van Rossum. Its journey began as a hobby in the winter months of 1989.
+        - Python is a high-level, general-purpose programming language known for its simplicity, readability, and versatility. It's widely used in various fields, including web development, data science, machine learning, and automation.
+        - Python, known for its simplicity and versatility, is one of the most popular programming languages today. From developing dynamic web applications to driving machine learning algorithms and handling complex data analytics. Most of the tech giants like Google, Amazon, Facebook, and Instagram rely on Python to build and maintain their cutting-edge technology solutions.
+        """)
 
-        sac.divider(label='Table', icon='Table', align='center', color='gray')
+        image_url = "https://d8it4huxumps7.cloudfront.net/uploads/images/65608f420c159_what_is_python_1.jpg?d=2000x2000"
+        st.image(image_url)
         
-        # Display the data table
-        st.write("Data Table:")
-        st.write(data.head(10))  # display the first 10 rows of the data
-
-    
-        # Define the model file path
-        model_file_path = "linear_reg_model(1).pkl"
-    
-        # Get the column names
-        columns = data.columns.tolist()
-    
-        # Create a dropdown to select the target column
-        target_column = st.selectbox("Select the target column", columns)
-    
-        # Select the correct features
-        features = [col for col in columns if col != target_column]
-    
-        # Define X as the feature columns
-        X = data[features]
-    
-        # Define y as the target column
-        y = data[target_column]
-    
-        try:
-            y = pd.to_numeric(y, errors='coerce')
-        except ValueError as e:
-            st.error(f"An error occurred while converting the target column to numeric: {e}")
-    
-        # Train and save the model if it doesn't exist
-        if not os.path.exists(model_file_path):
-            # Handle missing values
-            numeric_features = [col for col in X.columns if X[col].dtype.kind in 'bifc']
-    
-            if not numeric_features:
-                st.error("No numeric features found in the data. Please check your data and try again.")
-            else:
-                numeric_transformer = Pipeline(steps=[
-                    ('imputer', SimpleImputer(strategy='mean')),
-                ])
-    
-                preprocessor = ColumnTransformer(
-                    transformers=[
-                        ('num', numeric_transformer, numeric_features),
-                    ]
-                )
-    
-                # Train a simple linear regression model
-                model = Pipeline(steps=[('preprocessor', preprocessor),
-                                        ('regressor', LinearRegression())])
-                model.fit(X, y)
-    
-                # Save the model to a file
-                with open(model_file_path, 'wb') as handle:
-                    pickle.dump(model, handle)
+        # Key features
+        st.subheader("Key Features")
+        st.write("- **Interpreted Language:** This implies that Python code is executed one line at a time, making it an interpreted language. Also, in comparison to other popular languages like C, C++, Java, etc., Python code does not require compilation, making it easier to debug. In fact, an immediate format called the Bytecode is created from Python's source code.")
+        st.write("- **Cross-platform Language:** Python is compatible with many operating systems/ platforms, including Windows, macOS, Linux, etc. This feature allows Python code to be portable across platforms, further allowing programmers to write code once and run it indistinguishably on several platforms.")
+        st.write("- **Free and Open Source:** The language is free to download and use. Users can download Python from the official website. In addition to that, the public can also see the source code since Python is open-source.")
+        st.write("- **Object Oriented:** Python has object-oriented programming features, enabling the creation and use of classes, objects, and inheritance. It encourages modular and reusable code, making it easier to develop complex applications.")
+        st.write("- **Broad Standard Library:** Python contains a huge standard library with a wide selection of modules and functions, so you don't need to write any of your own code. Regular expressions, unit testing, web browsers, and other tools are all part of Python's sizable library.")
+        st.write("- **GUI Support:** It is possible to create/ develop graphical user interfaces in Python by using packages like PyQt5, PyQt4, wxPython, or Tk.")
+        st.write("- **Easy to Use and Maintain:** Python is pretty easy to pick up compared to other languages like C, C#, Javascript, etc. Anyone can pick up the basics of the relatively easy programming language in even a few hours or days. These features have won Python the title of one of the most user-friendly programming languages out there.")
+        st.write("- **Robust:** The robustness of Python is owed to its formidable error-management capabilities, which let programmers find and fix errors in their code effectively. These features include integrated exception handling and traceback information.")
+        st.write("- **Dynamically Typed:** Python is a dynamically typed language, i.e., the variable type is decided at run time (for example, int, double, long, etc.). This feature eliminates the need for users to declare the type of a variable.")
         
-    
-        # Load the pre-trained model
-        with open(model_file_path, 'rb') as handle:
-            model = pickle.load(handle)
-    
-        # Get the column names expected by the ColumnTransformer
-        expected_columns = model.named_steps['preprocessor'].transformers_[0][2]
+        # Basic concepts
+        st.subheader("Basic Concepts")
+        st.markdown("""
+        * **Variables:** Used to store data (e.g., numbers, text, lists).
+        * **Data Types:** Different types of data, such as integers, floats, strings, lists, tuples, dictionaries.
+        * **Operators:** Used to perform operations (e.g., arithmetic, comparison, logical).
+        * **Control Flow:** Statements that determine the order in which code is executed (e.g., if-else, loops).
+        * **Functions:** Reusable blocks of code that perform specific tasks.
+        * **Modules:** Files containing Python code that can be imported into other programs.
+        """)
         
-        # Get the actual columns in the data
-        actual_columns = X.columns
         
-        # Get the common columns between the expected columns and the actual columns
-        common_columns = list(set(expected_columns) & set(actual_columns))
-        
-        # Check if all expected columns are present in X
-        if not common_columns:
-            st.error("No common columns found between the expected columns and the actual columns. Please check your data and try again.")
-        else:
-            # Use the common columns to make predictions
-            X_common = X[common_columns]
-        
-            # Create a new ColumnTransformer with the common columns
-            new_transformer = ColumnTransformer(
-                transformers=[
-                    ('num', model.named_steps['preprocessor'].transformers_[0][1], common_columns),
-                ]
-            )
-        
-            # Fit the new ColumnTransformer to the data
-            new_transformer.fit(X_common)
-        
-            # Create a new Pipeline with the new ColumnTransformer
-            new_model = Pipeline(steps=[('preprocessor', new_transformer),
-                                      ('regressor', model.named_steps['regressor'])])
-        
-            # Fit the new Pipeline to the data
-            new_model.fit(X_common, y)
-        
-            # Make predictions with the new model
-            y_pred = new_model.predict(X_common)
-        
-            # Calculate the accuracy score (R-squared)
-            r2 = r2_score(y, y_pred)
-        
-            # Calculate the Mean Squared Error (MSE)
-            mse = mean_squared_error(y, y_pred)
-        
-            
-            
-            st.markdown("<hr>", unsafe_allow_html=True)
-            
-            # Display the accuracy score (R-squared)
-            st.subheader("R2 Score")
-            st.write(f"R-squared: {r2:.2f}")
-    
-            # Display the Mean Squared Error (MSE)
-            st.subheader("MSE Score")
-            st.write(f"Mean Squared Error (MSE): {mse:.2f}")
+        # Getting started
+        st.subheader("Getting Started")
+        st.markdown("""
+        1. **Download and Install:** Visit the official Python website (python.org) and download the appropriate version for your operating system.
+        2. **Write Code:** Use a text editor or integrated development environment (IDE) to write your Python code.
+        3. **Run Code:** To execute your code, save it as a .py file and run it from the command line or your IDE.
+        """)
 
-            # Display the predictions
-            st.subheader("Prediction Result")
-            st.write("Predictions:")
-            st.write(y_pred)
-
-# Data Transformation tab
-if selected == 4:
-    st.header("Data Transformation")
-    
-    # Check if a file has been uploaded
-    if 'uploaded_file' in st.session_state:
-        # Get the uploaded file
-        uploaded_file = st.session_state.uploaded_file
-        
-        # Check if the uploaded file is not empty
-        if uploaded_file.size > 0:
-            # Load the uploaded data
-            if uploaded_file.name.endswith('.csv'):
-                bytes_data = uploaded_file.getbuffer()
-                text_io = io.TextIOWrapper(io.BytesIO(bytes_data))
-                data = pd.read_csv(text_io)
-            elif uploaded_file.name.endswith('.xlsx'):
-                bytes_data = uploaded_file.getbuffer()
-                data = pd.read_excel(bytes_data)
-            
-            # Display the data dimensions
-            st.write(f"Original Data Shape: {data.shape}")
-            
-            # Display the data table
-            st.write("Original Data Table:")
-            st.write(data.head(10))  # display the first 10 rows of the data
-            
-            # Add a feature to remove columns
-            columns_to_remove = st.multiselect("Select columns to remove:", data.columns)
-            if columns_to_remove:
-                data = data.drop(columns=columns_to_remove)
-                st.write("Columns removed successfully!")
-            
-            # Display the updated data dimensions
-            st.write(f"Updated Data Shape: {data.shape}")
-            
-            # Display the updated data table
-            st.write("Updated Data Table:")
-            st.write(data.head(10))  # display the first 10 rows of the updated data
-            
-            # Store the updated data in the session state
-            st.session_state.data = data
-        else:
-            st.write("The uploaded file is empty.")
-    else:
-        st.write("Please upload a file first.")
+        # Popular libraries
+        st.subheader("Popular Libraries")
+        st.write("- **NumPy:** For numerical computations and scientific computing.")
+        st.write("- **Pandas:** For data manipulation and analysis.")
+        st.write("- **Matplotlib:** For creating visualizations and plots.")
+        st.write("- **Scikit-learn:** For machine learning tasks.")
+        st.write("- **TensorFlow and PyTorch:** For deep learning.")
 
 
-
-# Freeze the Learning tab
-if selected == 6:
-    st.header("Freeze the Learning")
-
-    if st.session_state.uploaded_file is None:
-        st.error("Please upload a file in the Data Ingestion section")
-    else:
-        # Load the uploaded file
-        file_path = "uploads/" + st.session_state.uploaded_file.name
-        if st.session_state.uploaded_file.name.endswith('.csv'):
-            data = pd.read_csv(file_path)
-        elif st.session_state.uploaded_file.name.endswith('.xlsx'):
-            data = pd.read_excel(file_path)
-
-        # Display the uploaded data
-        st.write("Uploaded Data:")
-        st.write(data)
-
-        # Get the target column
-        target_column = st.selectbox("Select the target column", data.columns)
-
-        # Create a pipeline for the model
-        numeric_features = data.select_dtypes(include=['int64', 'float64']).columns
-        categorical_features = data.select_dtypes(include=['object']).columns
-
-        numeric_features = [col for col in numeric_features if col != target_column]
-        categorical_features = [col for col in categorical_features if col != target_column]
-
-        numeric_transformer = Pipeline(steps=[
-            ('imputer', SimpleImputer(strategy='median')),
-        ])
-
-        categorical_transformer = Pipeline(steps=[
-            ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
-            ('le', LabelEncoder())
-        ])
-
-        preprocessor = ColumnTransformer(
-            transformers=[
-                ('num', numeric_transformer, numeric_features),
-                ('cat', categorical_transformer, categorical_features)
-            ]
-        )
-
-        # Define the models
-        models = {
-            "Linear Regression": LinearRegression(),
-            "Decision Tree": DecisionTreeRegressor(),
-            "AdaBoost": AdaBoostRegressor(),
-            #"XGBoost": XGBRegressor()
-        }
-
-        # Train the models
-        X = data.drop(columns=[target_column])
-        y = data[target_column]
-
-        # Check if the target column is numeric
-        if pd.api.types.is_numeric_dtype(y):
-            for model_name, model in models.items():
-                pipeline = Pipeline(steps=[('preprocessor', preprocessor),
-                                           ('model', model)])
-                pipeline.fit(X, y)
-
-                # Make predictions
-                predictions = pipeline.predict(X)
-
-                # Display the predictions
-                st.write(f"{model_name} Predictions:")
-                st.write(predictions)
-
-                # Evaluate the model
-                r2 = r2_score(y, predictions)
-                mse = mean_squared_error(y, predictions)
-                st.write(f"{model_name} R2 Score:", r2)
-                st.write(f"{model_name} Mean Squared Error:", mse)
-        else:
-            st.error("The target column must be numeric.")
+    if selected == 3:
+	    st.markdown("""
+			<div style="border: 1px solid #b8b8b8; border-radius: 10px; padding: 10px;">
+				<h4>First Python Program to Learn Python Programming</h4>
+				<p>There are two ways you can execute your Python program:</p>
+				<p>1. First, we write a program in a file and run it one time.</p>
+			    <p>2. Second, run a code line by line.</p>
+			</div>
+			""", unsafe_allow_html=True)
+			
