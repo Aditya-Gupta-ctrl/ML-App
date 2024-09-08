@@ -110,7 +110,3 @@ if selecteds == 1:
         st.write("- **Matplotlib:** For creating visualizations and plots.")
         st.write("- **Scikit-learn:** For machine learning tasks.")
         st.write("- **TensorFlow and PyTorch:** For deep learning.")
-
-
-    if selected == 3:
-
