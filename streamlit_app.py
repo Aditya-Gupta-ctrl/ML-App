@@ -70,7 +70,7 @@ if selecteds == 1:
         """)
 
         image_url = "https://d8it4huxumps7.cloudfront.net/uploads/images/65608f420c159_what_is_python_1.jpg?d=2000x2000"
-        st.image(image_url, use_column_width=True)
+        st.image(image_url, width=400)
         
         # Key features
         st.subheader("Key Features")
