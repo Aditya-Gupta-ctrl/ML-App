@@ -1,9 +1,2 @@
 streamlit
-numpy
-pandas
-scikit-learn
 streamlit_antd_components
-streamlit-elements
-dashboard
-pandas-profiling
-requests
