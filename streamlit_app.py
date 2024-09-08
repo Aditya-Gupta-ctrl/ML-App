@@ -125,7 +125,7 @@ if selecteds == 1:
         print("Hello World! I Don't Give a Bug")
         """
         st.code(code, language="python")
-        st.text("output")
+        st.text("Output")
         st.success("Hello World! I Don't Give a Bug")
         st.text("In this code we have used a [  print  ]function")
         code1 ="""
@@ -141,9 +141,7 @@ if selecteds == 1:
         code = """
         # sample comment 
         # This is Python Comment
-        name = "geeksforgeeks"
-        print(name)
         """
         st.code(code, language="python")
-
+        st.subheader("Indentation in Python
     
