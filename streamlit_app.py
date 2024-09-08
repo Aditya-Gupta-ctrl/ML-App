@@ -169,15 +169,15 @@ if selecteds == 1:
         st.image(image_url, width=600)
         st.write("By the end of this section, you’ll not only grasp the essence of Python’s data types but also wield them proficiently to tackle a wide array of programming challenges with confidence.")
         st.markdown("""
-        * **Strings
-        * **Numbers
-        * **Booleans
-        * **Python List
-        * **Python Tuples
-        * **Python Sets
-        * **Python Dictionary
-        * **Python Arrays
-        * **Type Casting
+        * **Strings**
+        * **Numbers**
+        * **Booleans**
+        * **Python List**
+        * **Python Tuples**
+        * **Python Sets**
+        * **Python Dictionary**
+        * **Python Arrays**
+        * **Type Casting**
         """)
 
 
