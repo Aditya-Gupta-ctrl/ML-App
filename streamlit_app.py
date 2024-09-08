@@ -127,3 +127,14 @@ if selecteds == 1:
         st.code(code, language="python")
         st.text("output")
         st.success("Hello World! I Don't Give a Bug")
+
+    if selected == 4:
+        st.subheader("Comments in Python")
+        st.write("Comments in Python are the lines in the code that are ignored by the interpreter during the execution of the program. Also, Comments enhance the readability of the code and help the programmers to understand the code very carefully.")
+        code = """
+        # sample comment 
+        # This is Python Comment
+        name = "geeksforgeeks"
+        print(name)
+        """
+        st.code(code, language="python")
