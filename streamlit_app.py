@@ -167,7 +167,17 @@ if selecteds == 1:
         st.write("Python data types offers, enabling you to manipulate and manage data with precision and flexibility. Additionally, we’ll delve into the dynamic world of data conversion with casting, and then move on to explore the versatile collections Python provides, including lists, tuples, sets, dictionaries, and arrays.")
         image_url="https://media.geeksforgeeks.org/wp-content/uploads/20191023173512/Python-data-structure.jpg"
         st.image(image_url, width=600)
-
+        st.write("By the end of this section, you’ll not only grasp the essence of Python’s data types but also wield them proficiently to tackle a wide array of programming challenges with confidence.")
+        st.markdown("""
+        * **Strings
+        * **Numbers
+        * **Booleans
+        * **Python List
+        * **Python Tuples
+        * **Python Sets
+        * **Python Dictionary
+        * **Python Arrays
+        * **Type Casting
 
 
 
