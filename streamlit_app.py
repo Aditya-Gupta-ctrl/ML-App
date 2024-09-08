@@ -119,7 +119,7 @@ if selecteds == 1:
         st.write("2. Second, run a code line by line.")
 
         code = """
+        # Python Program to print Hello World
         print("Hello World! I Don't Give a Bug")
         """
-
         st.code(code, language="python")
