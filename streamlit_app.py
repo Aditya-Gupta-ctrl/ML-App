@@ -125,4 +125,4 @@ if selecteds == 1:
         """
         st.code(code, language="python")
         st.text("output")
-        st.success('Hello World! I Don't Give a Bug', icon="✅")
+        st.success("Hello World! I Don't Give a Bug")
