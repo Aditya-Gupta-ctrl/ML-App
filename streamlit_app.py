@@ -194,9 +194,6 @@ if selecteds == 1:
         st.success("45")
         st.success("1456.8")
         st.success("John")
-        st.success("45",/n
-            "1456.8",/n
-            "John")
 
 
 
