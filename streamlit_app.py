@@ -112,5 +112,5 @@ if selecteds == 1:
         st.write("- **TensorFlow and PyTorch:** For deep learning.")
 
 
-    if selected == 1:
+    if selected == 2:
         st.header("Python Tutorial | Learn Python Programming Language")
