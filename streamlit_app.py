@@ -146,5 +146,5 @@ if selecteds == 1:
         st.subheader("Indentation in Python")
         st.write("Python indentation refers to adding white space before a statement to a particular block of code. In other words, all the statements with the same space to the left, belong to the same code block.")
         image_url1 = "https://media.geeksforgeeks.org/wp-content/uploads/20191125112615/Indentation-python2.jpg"
-        st.image(image_url1, width=800)
+        st.image(image_url1, width=600)
     
