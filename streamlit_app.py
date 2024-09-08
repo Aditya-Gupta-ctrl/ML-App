@@ -155,7 +155,7 @@ if selecteds == 1:
         Statement                                           Code block 1 continues  
         """
         st.code(code1, language="python")
-        st.message("Note: This will be more under standable in the Controll flow topic.")
+        st.info("Note: This will be more under standable in the Controll flow topic.")
         st.markdown("""
         * Statement (line 1), if condition (line 2), and statement (last line) belongs to the same block which means that after statement 1, if condition will be executed. and suppose the if condition becomes False then the Python will jump to the last statement for execution.
         * The nested if-else belongs to block 2 which means that if nested if becomes False, then Python will execute the statements inside the else condition.
