@@ -155,7 +155,14 @@ if selecteds == 1:
         Statement                                           Code block 1 continues  
         """
         st.code(code1, language="python")
-
+        st.markdown("""
+        * Statement (line 1), if condition (line 2), and statement (last line) belongs to the same block which means that after statement 1, if condition will be executed. and suppose the if condition becomes False then the Python will jump to the last statement for execution.
+        * **Data Types:** Different types of data, such as integers, floats, strings, lists, tuples, dictionaries.
+        * **Operators:** Used to perform operations (e.g., arithmetic, comparison, logical).
+        * **Control Flow:** Statements that determine the order in which code is executed (e.g., if-else, loops).
+        * **Functions:** Reusable blocks of code that perform specific tasks.
+        * **Modules:** Files containing Python code that can be imported into other programs.
+        """)
 
 
 
