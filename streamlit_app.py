@@ -39,9 +39,9 @@ if selecteds == 1:
             sac.MenuItem(type='divider'),
             sac.MenuItem('Basics', icon='box-fill', children=[
                 sac.MenuItem('First Program'),
-                sac.MenuItem('Syntax & Basic'),
-                sac.MenuItem('Data Types'),           
+                sac.MenuItem('Syntax & Basic'),           
                 sac.MenuItem('Variable'),
+                sac.MenuItem('Data Types'),
                 sac.MenuItem('Operations'),
                 sac.MenuItem('Control Flow'),
                 sac.MenuItem('Function'),
