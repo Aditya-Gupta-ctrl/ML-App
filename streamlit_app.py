@@ -113,4 +113,4 @@ if selecteds == 1:
 
 
     if selected == 3:
-        st.header("Python Tutorial | Learn Python Programming Language")
+        st.header("First Python Program to Learn Python Programming")
