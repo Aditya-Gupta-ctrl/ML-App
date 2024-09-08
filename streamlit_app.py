@@ -193,7 +193,7 @@ if selecteds == 1:
         st.success("45")
         st.success("1456.8")
         st.success("John")
-        st.write("45\n1456.8\nJohn")
+
 
 
 
