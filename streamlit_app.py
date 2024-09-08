@@ -112,11 +112,4 @@ if selecteds == 1:
 
 
     if selected == 3:
-	    st.markdown("""
-			<div style="border: 1px solid #b8b8b8; border-radius: 10px; padding: 10px;">
-				<h4>First Python Program to Learn Python Programming</h4>
-				<p>There are two ways you can execute your Python program:</p>
-				<p>1. First, we write a program in a file and run it one time.</p>
-			    <p>2. Second, run a code line by line.</p>
-			</div>
-			""", unsafe_allow_html=True)
+
