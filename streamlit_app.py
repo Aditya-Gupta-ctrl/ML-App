@@ -118,8 +118,11 @@ if selecteds == 1:
         st.write("1. First, we write a program in a file and run it one time.")
         st.write("2. Second, run a code line by line.")
 
+        st.text("Input")
         code = """
         # Python Program to print Hello World
         print("Hello World! I Don't Give a Bug")
         """
         st.code(code, language="python")
+        st.text("output")
+        st.success('Hello World! I Don't Give a Bug', icon="✅")
