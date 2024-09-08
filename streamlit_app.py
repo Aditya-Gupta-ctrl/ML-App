@@ -162,8 +162,11 @@ if selecteds == 1:
         * Statements inside nested if-else belong to block 3 and only one statement will be executed depending on the if-else condition.
         """)
 
-
-
+    if selected == 5:
+        st.header("Python Data Types")
+        st.write("Python data types offers, enabling you to manipulate and manage data with precision and flexibility. Additionally, we’ll delve into the dynamic world of data conversion with casting, and then move on to explore the versatile collections Python provides, including lists, tuples, sets, dictionaries, and arrays.")
+        image_url="https://media.geeksforgeeks.org/wp-content/uploads/20191023173512/Python-data-structure.jpg"
+        st.image(image_url, width=600)
 
 
 
