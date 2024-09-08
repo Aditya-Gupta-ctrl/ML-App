@@ -157,11 +157,8 @@ if selecteds == 1:
         st.code(code1, language="python")
         st.markdown("""
         * Statement (line 1), if condition (line 2), and statement (last line) belongs to the same block which means that after statement 1, if condition will be executed. and suppose the if condition becomes False then the Python will jump to the last statement for execution.
-        * **Data Types:** Different types of data, such as integers, floats, strings, lists, tuples, dictionaries.
-        * **Operators:** Used to perform operations (e.g., arithmetic, comparison, logical).
-        * **Control Flow:** Statements that determine the order in which code is executed (e.g., if-else, loops).
-        * **Functions:** Reusable blocks of code that perform specific tasks.
-        * **Modules:** Files containing Python code that can be imported into other programs.
+        * The nested if-else belongs to block 2 which means that if nested if becomes False, then Python will execute the statements inside the else condition.
+        * Statements inside nested if-else belong to block 3 and only one statement will be executed depending on the if-else condition.
         """)
 
 
