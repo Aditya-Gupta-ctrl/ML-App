@@ -114,3 +114,6 @@ if selecteds == 1:
 
     if selected == 3:
         st.header("First Python Program to Learn Python Programming")
+        st.write("There are two ways you can execute your Python program:")
+        st.write("1. First, we write a program in a file and run it one time.")
+        st.write("2. Second, run a code line by line.")
