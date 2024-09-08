@@ -178,6 +178,7 @@ if selecteds == 1:
         * **Python Dictionary
         * **Python Arrays
         * **Type Casting
+        """)
 
 
 
