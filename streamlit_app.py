@@ -163,6 +163,44 @@ if selecteds == 1:
         """)
 
     if selected == 5:
+        st.header("Python Variable")
+        st.write("Python Variable is containers that store values. Python is not “statically typed”. An Example of a Variable in Python is a representational name that serves as a pointer to an object. Once an object is assigned to a variable, it can be referred to by that name.")
+        st.markdown("""
+        * **Rules for Python variables**
+        * A Python variable name must start with a letter or the underscore character.
+        * A Python variable name cannot start with a number.
+        * A Python variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).
+        * Variable in Python names are case-sensitive (name, Name, and NAME are three different variables).
+        * The reserved words(keywords) in Python cannot be used to name the variable in Python.
+        """)
+        st.text("Input")
+        code = """
+        # An integer assignment
+        age = 45
+        
+        # A floating point
+        salary = 1456.8
+        
+        # A string
+        name = "John"
+        
+        print(age)
+        print(salary)
+        print(name)
+        """
+        st.code(code, language="python")
+        st.text("Output")
+        st.success("45"
+            "1456.8"
+            "John")
+
+
+
+
+
+    
+
+    if selected == 6:
         st.header("Python Data Types")
         st.write("Python data types offers, enabling you to manipulate and manage data with precision and flexibility. Additionally, we’ll delve into the dynamic world of data conversion with casting, and then move on to explore the versatile collections Python provides, including lists, tuples, sets, dictionaries, and arrays.")
         image_url="https://media.geeksforgeeks.org/wp-content/uploads/20191023173512/Python-data-structure.jpg"
