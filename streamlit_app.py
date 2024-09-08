@@ -117,3 +117,9 @@ if selecteds == 1:
         st.write("There are two ways you can execute your Python program:")
         st.write("1. First, we write a program in a file and run it one time.")
         st.write("2. Second, run a code line by line.")
+
+        code = """
+        print("Hello World! I Don't Give a Bug")
+        """
+
+        st.code(code, language="python")
