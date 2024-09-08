@@ -190,9 +190,11 @@ if selecteds == 1:
         """
         st.code(code, language="python")
         st.text("Output")
-        st.success("""45
+        st.success("""
+        45
         1456.8
-        John""")
+        John
+        """)
 
 
 
