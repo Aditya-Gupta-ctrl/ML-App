@@ -190,10 +190,13 @@ if selecteds == 1:
         """
         st.code(code, language="python")
         st.text("Output")
+        st.success("45<br>1456.8<br>John", unsafe_allow_html=True)
         st.success("45")
         st.success("1456.8")
         st.success("John")
-
+        st.success("45",/n
+            "1456.8",/n
+            "John")
 
 
 
