@@ -427,14 +427,14 @@ List = []
 print("Initial blank List: ")
 print(List)
 List = ['Basicslearn']
-print("\nList with the use of String: ")
+print("List with the use of String: ")
 print(List)
 List = ["Basics", "And", "Learn"]
-print("\nList containing multiple values: ")
+print("List containing multiple values: ")
 print(List[0])
 print(List[2])
 List = [['Basics', 'And'], ['Learn']]
-print("\nMulti-Dimensional List: ")
+print("Multi-Dimensional List: ")
 print(List)
 """
         st.code(code6, language="python")
