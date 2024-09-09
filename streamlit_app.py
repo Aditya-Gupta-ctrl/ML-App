@@ -216,6 +216,13 @@ if selecteds == 1:
         * **Python Arrays**
         * **Type Casting**
         """)
+        st.subheader("Strings")
+        st.write("Strings in Python are arrays of bytes representing Unicode characters. A string is a collection of one or more characters put in a single quote, double-quote, or triple-quote. In Python, there is no character data type Python, a character is a string of length one. It is represented by str class.")
+        st.text("Creating String")
+        st.write("Strings in Python can be created using single quotes, double quotes, or even triple quotes.")
+        st.markdown("""
+        **Example:**Example: This Python code showcases various string creation methods. It uses single quotes, double quotes, and triple quotes to create strings with different content and includes a multiline string. The code also demonstrates printing the strings and checking their data types.
+        """)
 
 
 
