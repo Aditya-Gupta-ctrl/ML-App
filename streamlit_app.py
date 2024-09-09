@@ -268,7 +268,7 @@ if selecteds == 1:
         """)
         st.text("Input")
         code2 = """
-        String1 = "GeeksForGeeks"
+        String1 = "Basicslearn"
         print("Initial String: ")
         print(String1)
         print("\nFirst character of String is: ")
@@ -280,11 +280,11 @@ if selecteds == 1:
         st.text("output")
         code3 = """
         Initial String: 
-        GeeksForGeeks
+        Basicslearn
         First character of String is: 
-        G
+        B
         Last character of String is: 
-        s
+        n
         """
         st.code(code3, language="python")
         st.subheader("2. Numeric Data Types in Python")
@@ -308,7 +308,7 @@ if selecteds == 1:
         c = 2 + 4j
         print("\nType of c: ", type(c))
         """
-        st.code(code, language="python")
+        st.code(code4, language="python")
 
 
 
