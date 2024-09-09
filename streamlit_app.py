@@ -434,7 +434,7 @@ print("List containing multiple values: ")
 print(List[0])
 print(List[2])
 List = [['Basics', 'And'], ['Learn']]
-print("\nMulti-Dimensional List: ")
+print("Multi-Dimensional List: ")
 print(List)
 """
         st.code(code6, language="python")
