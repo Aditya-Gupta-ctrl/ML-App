@@ -30,18 +30,18 @@ if selecteds == 0:
     st.success("Thank You for visiting our web Appliction.")
            
 if selecteds == 5:
-
+    
     # Create a title for the app
     st.title("Python Code Compiler")
     
     # Create a text area for input
-    code = st.text_area("Enter your Python code here", height=300)
+    code = st.text_area("Enter your Python code here", height=300, key="input")
     
     # Create a button to run the code
     run_button = st.button("Run")
     
     # Create a text area for output
-    output_area = st.text_area("Output", height=200, disabled=True)
+    output_area = st.text_area("Output", height=200, disabled=True, key="output")
     
     # Function to run the code
     def run_code(code):
@@ -56,7 +56,7 @@ if selecteds == 5:
     # Run the code when the button is clicked
     if run_button:
         output_code = run_code(code)
-        st.write(output_code)  # Use st.write to display the output
+        st.session_state.output = output_code  # Update the output text area
     
     
 
