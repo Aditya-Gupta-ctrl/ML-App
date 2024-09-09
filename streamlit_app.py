@@ -207,8 +207,8 @@ if selecteds == 1:
         st.image(image_url, width=600)
         st.write("By the end of this section, you’ll not only grasp the essence of Python’s data types but also wield them proficiently to tackle a wide array of programming challenges with confidence.")
         st.markdown("""
-        * **Strings**
         * **Numbers**
+        * **Strings**
         * **Booleans**
         * **Python List**
         * **Python Tuples**
@@ -217,7 +217,39 @@ if selecteds == 1:
         * **Python Arrays**
         * **Type Casting**
         """)
-        st.subheader("1. Strings Data Types in Python")
+        st.subheader("1. Numeric Data Types in Python")
+        st.write("The numeric data type in Python represents the data that has a numeric value. A numeric value can be an integer, a floating number, or even a complex number. These values are defined as Python int , Python float , and Python complex classes in Python .")
+        st. markdown("""
+        * **Integer-** This value is represented by int class. It contains positive or negative whole numbers (without fractions or decimals). In Python, there is no limit to how long an integer value can be
+        * **Float-** This value is represented by the float class. It is a real number with a floating-point representation. It is specified by a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.
+        * **Complex Numbers-** A complex number is represented by a complex class. It is specified as (real part) + (imaginary part)j . For example – 2+3j
+        """)
+        st.info("Note – type() function is used to determine the type of Python data type.")
+        st.markdown("""
+        **Example** This code demonstrates how to determine the data type of variables in Python using the type() function . It prints the data types of three variables : a (integer) , b (float) , and c (complex) . The output shows the respective data type Python for each variable.
+        """)
+        st.text("Input")
+        code4 = """
+        a = 5
+print("Type of a: ", type(a))
+        
+b = 5.0
+print("Type of b: ", type(b))
+        
+c = 2 + 4j
+print("Type of c: ", type(c))
+        """
+        st.code(code4, language="python")
+        st.text("Output")
+        code5 = """
+Type of a:  <class 'int'>
+Type of b:  <class 'float'>
+Type of c:  <class 'complex'>
+"""
+        st.code(code5, language="python")
+
+        
+        st.subheader("2. Strings Data Types in Python")
         st.write("Strings in Python are arrays of bytes representing Unicode characters. A string is a collection of one or more characters put in a single quote, double-quote, or triple-quote. In Python, there is no character data type Python, a character is a string of length one. It is represented by str class.")
         st.text("Creating String")
         st.write("Strings in Python can be created using single quotes, double quotes, or even triple quotes.")
@@ -287,29 +319,8 @@ print(String1[-1])
         n
         """
         st.code(code3, language="python")
-        st.subheader("2. Numeric Data Types in Python")
-        st.write("The numeric data type in Python represents the data that has a numeric value. A numeric value can be an integer, a floating number, or even a complex number. These values are defined as Python int , Python float , and Python complex classes in Python .")
-        st. markdown("""
-        * **Integer-** This value is represented by int class. It contains positive or negative whole numbers (without fractions or decimals). In Python, there is no limit to how long an integer value can be
-        * **Float-** This value is represented by the float class. It is a real number with a floating-point representation. It is specified by a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.
-        * **Complex Numbers-** A complex number is represented by a complex class. It is specified as (real part) + (imaginary part)j . For example – 2+3j
-        """)
-        st.info("Note – type() function is used to determine the type of Python data type.")
-        st.markdown("""
-        **Example** This code demonstrates how to determine the data type of variables in Python using the type() function . It prints the data types of three variables : a (integer) , b (float) , and c (complex) . The output shows the respective data type Python for each variable.
-        """)
-        code4 = """
-        a = 5
-print("Type of a: ", type(a))
-        
-b = 5.0
-print("Type of b: ", type(b))
-        
-c = 2 + 4j
-print("Type of c: ", type(c))
-        """
-        st.code(code4, language="python")
 
+        
 
 
 
