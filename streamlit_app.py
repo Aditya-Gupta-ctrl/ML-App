@@ -41,7 +41,7 @@ if selecteds == 5:
     run_button = st.button("Run")
     
     # Create a text area for output
-    output_area = st.text_area("Output", height=200, disabled=True, key="output")
+    output_area = st.text_area("Output", height=200, key="output")
     
     # Function to run the code
     def run_code(code):
@@ -56,7 +56,7 @@ if selecteds == 5:
     # Run the code when the button is clicked
     if run_button:
         output_code = run_code(code)
-        st.session_state.output = output_code  # Update the output text area
+        output_area.value = output_code  # Update the output text area
     
     
 
