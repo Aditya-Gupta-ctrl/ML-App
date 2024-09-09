@@ -276,7 +276,7 @@ if selecteds == 1:
         print("\nLast character of String is: ")
         print(String1[-1])
         """
-        st.code(code2 , language="english")
+        st.code(code2 , language="python")
         st.text("output")
         code3 = """
         Initial String: 
@@ -296,9 +296,19 @@ if selecteds == 1:
         """)
         st.info("Note – type() function is used to determine the type of Python data type.")
         st.markdown("""
-        **Example**
+        **Example** This code demonstrates how to determine the data type of variables in Python using the type() function . It prints the data types of three variables : a (integer) , b (float) , and c (complex) . The output shows the respective data type Python for each variable.
         """)
-
+        code4 = """
+        a = 5
+        print("Type of a: ", type(a))
+        
+        b = 5.0
+        print("\nType of b: ", type(b))
+        
+        c = 2 + 4j
+        print("\nType of c: ", type(c))
+        """
+        st.code(code, language="python")
 
 
 
