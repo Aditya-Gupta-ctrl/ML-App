@@ -223,6 +223,7 @@ if selecteds == 1:
         st.markdown("""
         * **Example:** This Python code showcases various string creation methods. It uses single quotes, double quotes, and triple quotes to create strings with different content and includes a multiline string. The code also demonstrates printing the strings and checking their data types.
         """)
+        st.text("Input")
         code = """
         String1 = 'Welcome to the Geeks World'
         print("String with the use of Single Quotes: ")
@@ -243,6 +244,23 @@ if selecteds == 1:
         print(String1)
         """
         st.code(code, language="python")
+        st.text("Output")
+        code1 = """
+        String with the use of Single Quotes: 
+        Welcome to the Geeks World
+        String with the use of Double Quotes: 
+        I'm a Geek
+        <class 'str'>
+        String with the use of Triple Quotes: 
+        I'm a Geek and I live in a world of "Geeks"
+        <class 'str'>
+        Creating a multiline String: 
+        Geeks 
+                    For 
+                    Life
+        """
+        st.code(code1, language="python")
+        
 
 
 
