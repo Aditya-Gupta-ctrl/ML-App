@@ -72,7 +72,86 @@ if selecteds == 5:
         output = run_code_on_rextester(code, language)
         st.write("Output:")
         st.code(output)
+if selecteds == 4:
     
+    # Create a title for the app
+    st.title("Rextester Online Compiler")
+    
+    # Create a text area for input
+    code = st.text_area("Enter your code here", height=300, key="input")
+    
+    # Create a selectbox for language selection
+    languages = {
+        "C#": 1,
+        "VB.NET": 2,
+        "F#": 3,
+        "Java": 4,
+        "Python": 5,
+        "C (gcc)": 6,
+        "C++ (gcc)": 7,
+        "Php": 8,
+        "Pascal": 9,
+        "Objective-C": 10,
+        "Haskell": 11,
+        "Ruby": 12,
+        "Perl": 13,
+        "Lua": 14,
+        "Nasm": 15,
+        "Sql Server": 16,
+        "Javascript": 17,
+        "Lisp": 18,
+        "Prolog": 19,
+        "Go": 20,
+        "Scala": 21,
+        "Scheme": 22,
+        "Node.js": 23,
+        "Python 3": 24,
+        "Octave": 25,
+        "C (clang)": 26,
+        "C++ (clang)": 27,
+        "C++ (vc++)": 28,
+        "C (vc)": 29,
+        "D": 30,
+        "R": 31,
+        "Tcl": 32,
+        "MySQL": 33,
+        "PostgreSQL": 34,
+        "Oracle": 35,
+        "Swift": 37,
+        "Bash": 38,
+        "Ada": 39,
+        "Erlang": 40,
+        "Elixir": 41,
+        "Ocaml": 42,
+        "Kotlin": 43,
+        "Brainf***": 44,
+        "Fortran": 45,
+        "Rust": 46,
+        "Clojure": 47
+    }
+    language = st.selectbox("Select language", list(languages.keys()))
+    
+    # Create a button to run the code
+    run_button = st.button("Run")
+    
+    # Function to run the code on Rextester
+    def run_code_on_rextester(code, language):
+        api_url = "https://rextester.com/rundotnet/api"
+        data = f"LanguageChoice={languages[language]}&Program={code}&Input=&CompilerArgs="
+        response = requests.post(api_url, data=data)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return "Error: " + response.text
+    
+    # Run the code when the button is clicked
+    if run_button:
+        output = run_code_on_rextester(code, language)
+        st.write("Output:")
+        if isinstance(output, dict):
+            st.write(output["Result"])
+        else:
+            st.write(output)
 
 #Python Tab Section
 if selecteds == 1:
