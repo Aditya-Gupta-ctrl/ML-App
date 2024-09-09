@@ -30,7 +30,6 @@ if selecteds == 0:
     st.success("Thank You for visiting our web Appliction.")
            
 if selecteds == 5:
-    
 
     
     # Create a code editor
@@ -63,13 +62,8 @@ if selecteds == 5:
     # Display the CodeMirror instance
     st.components.v1.html(html, height=600, scrolling=True)
     
-    # Update the code when the user types
-    def update_code():
-        global code
-        code = st.session_state.code
-    
     # Run the code when the user clicks the run button
-    def run_code():
+    def run_code(code):
         try:
             output = eval(code)
             st.write("Output:")
@@ -79,7 +73,10 @@ if selecteds == 5:
     
     # Add a run button
     if st.button("Run"):
-        run_code()
+        if 'code' in st.session_state:
+            run_code(st.session_state.code)
+        else:
+            st.error("Please enter some code")
     
     # Update the code in the session state
     st.components.v1.html("""
@@ -98,7 +95,13 @@ if selecteds == 5:
     """)
     
     # Update the code in the session state
-    st.session_state.code = code
+    def update_code():
+        if 'code' in st.session_state:
+            return st.session_state.code
+        else:
+            return ''
+    
+    st.session_state.code = update_code()
     
     
 
