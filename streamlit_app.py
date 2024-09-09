@@ -438,6 +438,19 @@ print("\nMulti-Dimensional List: ")
 print(List)
 """
         st.code(code6, language="python")
+        st.text("Output")
+        code7 = """
+Initial blank List: 
+[]
+List with the use of String: 
+['GeeksForGeeks']
+List containing multiple values: 
+Geeks
+Geeks
+Multi-Dimensional List: 
+[['Geeks', 'For'], ['Geeks']]
+"""
+        st.code(code7, language="python")
         
         
         
