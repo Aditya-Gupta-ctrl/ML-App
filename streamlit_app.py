@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit_antd_components as sac
-import json
+import requests
 
 # Set page config
 st.set_page_config(
@@ -32,37 +32,42 @@ if selecteds == 0:
 if selecteds == 5:
     
     
+    
     # Create a title for the app
-    st.title("Python Code Compiler")
+    st.title("Rextester Online Compiler")
     
     # Create a text area for input
-    code = st.text_area("Enter your Python code here", height=300, key="input")
+    code = st.text_area("Enter your code here", height=300, key="input")
+    
+    # Create a selectbox for language selection
+    languages = ["Python", "Java", "C++", "C#", "JavaScript"]
+    language = st.selectbox("Select language", languages)
     
     # Create a button to run the code
     run_button = st.button("Run")
     
-    # Create a text input for output
-    if "output" not in st.session_state:
-        st.session_state.output = ""
-    
-    # Function to run the code
-    def run_code(code):
-        try:
-            # Create a restricted environment
-            env = {}
-            exec(code, env)
-            return "Code executed successfully"
-        except Exception as e:
-            return str(e)
+    # Function to run the code on Rextester
+    def run_code_on_rextester(code, language):
+        api_url = "https://rextester.com/rundotnet/api"
+        data = {
+            "LanguageChoiceWrapper": language,
+            "Program": code,
+            "Input": "",
+            "CompilerArguments": "",
+            "ExpectedOutput": ""
+        }
+        response = requests.post(api_url, json=data)
+        if response.status_code == 200:
+            return response.json()["Result"]
+        else:
+            return "Error: " + response.text
     
     # Run the code when the button is clicked
     if run_button:
-        output_code = run_code(code)
-        st.session_state.output = output_code  # Update the output text input
-    
-    # Display the output
-    st.text_area("Output", value=st.session_state.output, height=200, key="output", disabled=True)
-    
+        output = run_code_on_rextester(code, language)
+        st.write("Output:")
+        st.write(output)
+        
     
 
 #Python Tab Section
