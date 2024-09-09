@@ -295,8 +295,8 @@ if selecteds == 1:
         """)
         st.info("Note – type() function is used to determine the type of Python data type.")
         st.markdown("""
-        **Example
-        
+        **Example**
+        """)
 
 
 
