@@ -276,7 +276,7 @@ if selecteds == 1:
         print("\nLast character of String is: ")
         print(String1[-1])
         """
-        st.code(code2 , language="python")
+        st.code(code2 , language="english")
         st.text("output")
         code3 = """
         Initial String: 
