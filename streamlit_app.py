@@ -260,6 +260,32 @@ if selecteds == 1:
                     Life
         """
         st.code(code1, language="python")
+        st.subheader("Accessing elements of String")
+        st.write("In Python programming , individual characters of a String can be accessed by using the method of Indexing. Negative Indexing allows negative address references to access characters from the back of the String, e.g. -1 refers to the last character, -2 refers to the second last character, and so on.")
+        st.markdown("""
+        **Example:** This Python code demonstrates how to work with a string named ‘ String1′ . It initializes the string with “GeeksForGeeks” and prints it. It then showcases how to access the first character ( “G” ) using an index of 0 and the last character ( “s” ) using a negative index of -1.
+        """)
+        st.text("Input")
+        code2 = """
+        String1 = "GeeksForGeeks"
+        print("Initial String: ")
+        print(String1)
+        print("\nFirst character of String is: ")
+        print(String1[0])
+        print("\nLast character of String is: ")
+        print(String1[-1])
+        """
+        st.code(code2 , language="python")
+        st.text("output")
+        code3 = """
+        Initial String: 
+        GeeksForGeeks
+        First character of String is: 
+        G
+        Last character of String is: 
+        s
+        """
+        st.code(code3, language="python")
         
 
 
