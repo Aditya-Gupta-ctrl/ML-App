@@ -300,13 +300,13 @@ if selecteds == 1:
         """)
         code4 = """
         a = 5
-        print("Type of a: ", type(a))
+print("Type of a: ", type(a))
         
-        b = 5.0
-        print("\nType of b: ", type(b))
+b = 5.0
+print("Type of b: ", type(b))
         
-        c = 2 + 4j
-        print("\nType of c: ", type(c))
+c = 2 + 4j
+print("Type of c: ", type(c))
         """
         st.code(code4, language="python")
 
