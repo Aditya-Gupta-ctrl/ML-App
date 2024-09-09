@@ -66,7 +66,7 @@ if selecteds == 5:
     if run_button:
         output = run_code_on_rextester(code, language)
         st.write("Output:")
-        st.write(output)
+        st.code(output)
         
     
 
