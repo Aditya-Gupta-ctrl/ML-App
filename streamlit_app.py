@@ -31,50 +31,8 @@ if selecteds == 0:
     st.info("Preferred device are laptop, but if You are a Phone user so when You click on Python You will see a right facing arrow on the top left click to openup the menu. ")
     st.success("Thank You for visiting our web Appliction.")
            
+
 if selecteds == 5:
-    
-    
-    # Create a title for the app
-    st.title("Rextester Online Compiler")
-    
-    # Create a text area for input
-    code = st.text_area("Enter your code here", height=300, key="input")
-    
-    # Create a selectbox for language selection
-    languages = ["Python", "Java", "C++", "C#", "JavaScript"]
-    language = st.selectbox("Select language", languages)
-    
-    # Create a button to run the code
-    run_button = st.button("Run")
-    
-    # Function to run the code on Rextester
-    def run_code_on_rextester(code, language):
-        api_url = "https://rextester.com/rundotnet/api"
-        data = {
-            "LanguageChoiceWrapper": language,
-            "Program": code,
-            "Input": "",
-            "CompilerArguments": "",
-            "ExpectedOutput": ""
-        }
-        response = requests.post(api_url, json=data)
-        if response.status_code == 200:
-            response_json = response.json()
-            if "Result" in response_json:
-                return response_json["Result"]
-            else:
-                return "Error: " + response_json["Errors"][0]["ErrorMessage"]
-        else:
-            return "Error: " + response.text
-    
-    # Run the code when the button is clicked
-    if run_button:
-        output = run_code_on_rextester(code, language)
-        st.write("Output:")
-        st.code(output)
-
-
-if selecteds == 4:
     
     # Create a title for the app
     st.title("Rextester Online Compiler")
@@ -161,6 +119,10 @@ if selecteds == 4:
             st.write(output.get("Result", "No output"))
         else:
             st.write(output)
+
+
+
+
 
 #Python Tab Section
 if selecteds == 1:
