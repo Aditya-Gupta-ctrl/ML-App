@@ -31,6 +31,7 @@ if selecteds == 0:
            
 if selecteds == 5:
     
+    
     # Create a title for the app
     st.title("Python Code Compiler")
     
@@ -60,7 +61,7 @@ if selecteds == 5:
         st.session_state.output = output_code  # Update the output text input
     
     # Display the output
-    st.text_input("Output", value=st.session_state.output, key="output", height=200, disabled=True)
+    st.text_area("Output", value=st.session_state.output, height=200, key="output", disabled=True)
     
     
 
