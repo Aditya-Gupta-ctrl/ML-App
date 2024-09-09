@@ -30,20 +30,9 @@ if selecteds == 0:
     st.success("Thank You for visiting our web Appliction.")
            
 if selecteds == 5:
-
+    
     # Create a code editor
-    code = st.text_area("Code", height=500)
-    
-    # Add a run button
-    if st.button("Run"):
-        # Execute the code
-        try:
-            exec(code)
-        except Exception as e:
-            st.error(f"Error: {e}")
-    
-    # Add an output display
-    output = st.text_area("Output", height=200)
+    code = st.text_area("Code", height=500, key="code")
     
     # Create a CodeMirror instance
     html = """
@@ -55,7 +44,7 @@ if selecteds == 5:
                 height: 500px;
             }
         </style>
-        <textarea id="code" name="code"></textarea>
+        <textarea id="code" name="code">%s</textarea>
         <script>
             var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                 lineNumbers: true,
@@ -67,7 +56,7 @@ if selecteds == 5:
                 document.getElementById('streamlit-component').dispatchEvent(new CustomEvent('update', { detail: editor.getValue() }));
             });
         </script>
-        """ % code
+        """ % (code, code)
     
     # Display the CodeMirror instance
     st.components.v1.html(html, height=600, scrolling=True)
@@ -77,46 +66,21 @@ if selecteds == 5:
         global code
         code = st.session_state.code
     
+    # Run the code when the user clicks the run button
+    def run_code():
+        try:
+            output = eval(code)
+            st.write("Output:")
+            st.write(output)
+        except Exception as e:
+            st.error(f"Error: {e}")
+    
+    # Add a run button
+    if st.button("Run"):
+        run_code()
+    
+    # Update the code in the session state
     st.session_state.code = code
-    st.components.v1.html("""
-        <script>
-            document.addEventListener('update', function(event) {
-                parent.postMessage(event.detail, '*');
-            });
-            window.addEventListener('message', function(event) {
-                if (event.data) {
-                    document.getElementById('code').value = event.data;
-                    editor.setValue(event.data);
-                }
-            });
-        </script>
-    """)
-    
-    # Update the code in the text area
-    def update_text_area():
-        global code
-        code = st.session_state.code
-        st.text_area("Code", value=code, height=500, key="text_area")
-    
-    st.session_state.code = code
-    st.components.v1.html("""
-        <script>
-            document.addEventListener('update', function(event) {
-                parent.postMessage(event.detail, '*');
-            });
-            window.addEventListener('message', function(event) {
-                if (event.data) {
-                    document.getElementById('code').value = event.data;
-                    editor.setValue(event.data);
-                    parent.postMessage(event.detail, '*');
-                }
-            });
-        </script>
-    """)
-    
-    # Run the update functions
-    update_code()
-    update_text_area()
     
     
 
