@@ -221,7 +221,7 @@ if selecteds == 1:
         st.text("Creating String")
         st.write("Strings in Python can be created using single quotes, double quotes, or even triple quotes.")
         st.markdown("""
-        **Example:**Example: This Python code showcases various string creation methods. It uses single quotes, double quotes, and triple quotes to create strings with different content and includes a multiline string. The code also demonstrates printing the strings and checking their data types.
+        * **Example:** This Python code showcases various string creation methods. It uses single quotes, double quotes, and triple quotes to create strings with different content and includes a multiline string. The code also demonstrates printing the strings and checking their data types.
         """)
 
 
