@@ -1,6 +1,8 @@
 import streamlit as st
 import streamlit_antd_components as sac
 import requests
+import json
+
 
 # Set page config
 st.set_page_config(
@@ -32,7 +34,6 @@ if selecteds == 0:
 if selecteds == 5:
     
     
-    
     # Create a title for the app
     st.title("Rextester Online Compiler")
     
@@ -58,7 +59,11 @@ if selecteds == 5:
         }
         response = requests.post(api_url, json=data)
         if response.status_code == 200:
-            return response.json()["Result"]
+            response_json = response.json()
+            if "Result" in response_json:
+                return response_json["Result"]
+            else:
+                return "Error: " + response_json["Errors"][0]["ErrorMessage"]
         else:
             return "Error: " + response.text
     
@@ -67,7 +72,6 @@ if selecteds == 5:
         output = run_code_on_rextester(code, language)
         st.write("Output:")
         st.code(output)
-        
     
 
 #Python Tab Section
