@@ -72,6 +72,8 @@ if selecteds == 5:
         output = run_code_on_rextester(code, language)
         st.write("Output:")
         st.code(output)
+
+
 if selecteds == 4:
     
     # Create a title for the app
@@ -140,7 +142,11 @@ if selecteds == 4:
         data = f"LanguageChoice={languages[language]}&Program={code}&Input=&CompilerArgs="
         response = requests.post(api_url, data=data)
         if response.status_code == 200:
-            return response.json()
+            try:
+                output = response.json()
+                return output
+            except json.JSONDecodeError:
+                return "Error: Unable to parse JSON response"
         else:
             return "Error: " + response.text
     
@@ -149,7 +155,7 @@ if selecteds == 4:
         output = run_code_on_rextester(code, language)
         st.write("Output:")
         if isinstance(output, dict):
-            st.write(output["Result"])
+            st.write(output.get("Result", "No output"))
         else:
             st.write(output)
 
