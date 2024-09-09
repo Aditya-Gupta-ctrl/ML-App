@@ -29,22 +29,31 @@ if selecteds == 0:
     st.success("Thank You for visiting our web Appliction.")
            
 if selecteds == 5:
-    import ast
-
-    st.title("Python Compiler")
+    # Create a code editor
+    editor = Ace(
+        value="",
+        lang="python",
+        theme="monokai",
+        height="500px",
+        width="100%",
+    )
     
-    code = st.text_area("Enter your Python code", height=200)
+    # Add the code editor to the Streamlit app
+    st.write(editor)
     
-    try:
-        compiled_code = compile(code, filename="<string>", mode="exec")
-    except SyntaxError as e:
-        st.error(f"Syntax error: {e}")
+    # Add a run button
+    if st.button("Run"):
+        # Get the code from the editor
+        code = editor.value
     
-    restricted_env = {}
-    exec(compiled_code, restricted_env)
+        # Execute the code
+        try:
+            exec(code)
+        except Exception as e:
+            st.error(f"Error: {e}")
     
-    st.write("Output:")
-    st.write(restricted_env)
+    # Add an output display
+    output = st.text_area("Output", height=200)
     
     
 
