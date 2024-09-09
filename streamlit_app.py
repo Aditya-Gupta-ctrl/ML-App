@@ -455,7 +455,7 @@ Multi-Dimensional List:
         st.write("In order to access the list items refer to the index number. Use the index operator [ ] to access an item in a list. In Python, negative sequence indexes represent positions from the end of the array. Instead of having to compute the offset as in List[len(List)-3], it is enough to just write List[-3]. Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second-last item, etc.")
         st.text("Input")
         code8 = """
-List = ["Geeks", "For", "Geeks"]
+List = ["Basics", "And", "Learn"]
 print("Accessing element from the list")
 print(List[0])
 print(List[2])
@@ -467,11 +467,11 @@ print(List[-3])
         st.text("Output")
         code9 = """
 Accessing element from the list
-Geeks
-Geeks
+Basics
+Learn
 Accessing element using negative indexing
-Geeks
-Geeks
+Learn
+Basics
 """
         st.code(code9, language="python")
         
