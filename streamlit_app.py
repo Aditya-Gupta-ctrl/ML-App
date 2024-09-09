@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit_antd_components as sac
-from ace import Ace
+import json
 
 # Set page config
 st.set_page_config(
@@ -30,23 +30,12 @@ if selecteds == 0:
     st.success("Thank You for visiting our web Appliction.")
            
 if selecteds == 5:
+
     # Create a code editor
-    editor = Ace(
-        value="",
-        lang="python",
-        theme="monokai",
-        height="500px",
-        width="100%",
-    )
-    
-    # Add the code editor to the Streamlit app
-    st.write(editor)
+    code = st.text_area("Code", height=500)
     
     # Add a run button
     if st.button("Run"):
-        # Get the code from the editor
-        code = editor.value
-    
         # Execute the code
         try:
             exec(code)
@@ -55,6 +44,79 @@ if selecteds == 5:
     
     # Add an output display
     output = st.text_area("Output", height=200)
+    
+    # Create a CodeMirror instance
+    html = """
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/python/python.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+        <style>
+            .CodeMirror {
+                height: 500px;
+            }
+        </style>
+        <textarea id="code" name="code"></textarea>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                mode: "python",
+                theme: "monokai",
+                value: '%s'
+            });
+            editor.on('change', function() {
+                document.getElementById('streamlit-component').dispatchEvent(new CustomEvent('update', { detail: editor.getValue() }));
+            });
+        </script>
+        """ % code
+    
+    # Display the CodeMirror instance
+    st.components.v1.html(html, height=600, scrolling=True)
+    
+    # Update the code when the user types
+    def update_code():
+        global code
+        code = st.session_state.code
+    
+    st.session_state.code = code
+    st.components.v1.html("""
+        <script>
+            document.addEventListener('update', function(event) {
+                parent.postMessage(event.detail, '*');
+            });
+            window.addEventListener('message', function(event) {
+                if (event.data) {
+                    document.getElementById('code').value = event.data;
+                    editor.setValue(event.data);
+                }
+            });
+        </script>
+    """)
+    
+    # Update the code in the text area
+    def update_text_area():
+        global code
+        code = st.session_state.code
+        st.text_area("Code", value=code, height=500, key="text_area")
+    
+    st.session_state.code = code
+    st.components.v1.html("""
+        <script>
+            document.addEventListener('update', function(event) {
+                parent.postMessage(event.detail, '*');
+            });
+            window.addEventListener('message', function(event) {
+                if (event.data) {
+                    document.getElementById('code').value = event.data;
+                    editor.setValue(event.data);
+                    parent.postMessage(event.detail, '*');
+                }
+            });
+        </script>
+    """)
+    
+    # Run the update functions
+    update_code()
+    update_text_area()
     
     
 
