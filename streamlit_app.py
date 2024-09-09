@@ -31,6 +31,8 @@ if selecteds == 0:
            
 if selecteds == 5:
     
+
+    
     # Create a code editor
     code = st.text_area("Code", height=500, key="code")
     
@@ -78,6 +80,22 @@ if selecteds == 5:
     # Add a run button
     if st.button("Run"):
         run_code()
+    
+    # Update the code in the session state
+    st.components.v1.html("""
+        <script>
+            document.addEventListener('update', function(event) {
+                parent.postMessage(event.detail, '*');
+            });
+            window.addEventListener('message', function(event) {
+                if (event.data) {
+                    document.getElementById('code').value = event.data;
+                    editor.setValue(event.data);
+                    parent.postMessage(event.detail, '*');
+                }
+            });
+        </script>
+    """)
     
     # Update the code in the session state
     st.session_state.code = code
