@@ -230,11 +230,11 @@ String1 = 'Welcome to the Basics World'
 print("String with the use of Single Quotes: ")
 print(String1)
 String1 = "I'm a Basic"
-print("\nString with the use of Double Quotes: ")
+print("String with the use of Double Quotes: ")
 print(String1)
 print(type(String1))
-String1 = '''I'm a Geek and I live in a world of "Basics"'''
-print("\nString with the use of Triple Quotes: ")
+String1 = '''I'm a Basic and I live in a world of "Basics"'''
+print("String with the use of Triple Quotes: ")
 print(String1)
 print(type(String1))
 
@@ -248,12 +248,12 @@ print(String1)
         st.text("Output")
         code1 = """
         String with the use of Single Quotes: 
-        Welcome to the Geeks World
+        Welcome to the Basics World
         String with the use of Double Quotes: 
-        I'm a Geek
+        I'm a Basic
         <class 'str'>
         String with the use of Triple Quotes: 
-        I'm a Geek and I live in a world of "Geeks"
+        I'm a Basic and I live in a world of "Basics"
         <class 'str'>
         Creating a multiline String: 
         Geeks 
