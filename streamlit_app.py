@@ -243,7 +243,7 @@ if selecteds == 1:
         print("\nCreating a multiline String: ")
         print(String1)
         """
-        st.code(code, language="python")
+        st.code(code)
         st.text("Output")
         code1 = """
         String with the use of Single Quotes: 
