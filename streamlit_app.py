@@ -141,9 +141,12 @@ if selecteds == 4:
         api_url = "https://rextester.com/rundotnet/api"
         data = f"LanguageChoice={languages[language]}&Program={code}&Input=&CompilerArgs="
         response = requests.post(api_url, data=data)
+        st.write("Response Status Code:", response.status_code)
+        st.write("Response Text:", response.text)
         if response.status_code == 200:
             try:
                 output = response.json()
+                st.write("Output (JSON):", output)
                 return output
             except json.JSONDecodeError:
                 return "Error: Unable to parse JSON response"
