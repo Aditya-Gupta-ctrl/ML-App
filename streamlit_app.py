@@ -25,7 +25,7 @@ selecteds = sac.tabs([
 if selecteds == 0:
     st.header("Welcome to Chik Dabak Dam Dam")
     st.subheader("Directly go the python for learning {others things are work in progress}")
-    st.write("Backchodi maat kar lawde kaam chal raha hai na")
+    st.info("If You are a Phone user so when You click on Python You will see a right Facing arrow click to open ut the menu.Thank You for visiting Our web Appliction.")
            
 
 
@@ -216,7 +216,7 @@ if selecteds == 1:
         * **Python Arrays**
         * **Type Casting**
         """)
-        st.subheader("Strings")
+        st.subheader("1. Strings Data Types in Python")
         st.write("Strings in Python are arrays of bytes representing Unicode characters. A string is a collection of one or more characters put in a single quote, double-quote, or triple-quote. In Python, there is no character data type Python, a character is a string of length one. It is represented by str class.")
         st.text("Creating String")
         st.write("Strings in Python can be created using single quotes, double quotes, or even triple quotes.")
@@ -286,6 +286,16 @@ if selecteds == 1:
         s
         """
         st.code(code3, language="python")
+        st.subheader("2. Numeric Data Types in Python")
+        st.write("The numeric data type in Python represents the data that has a numeric value. A numeric value can be an integer, a floating number, or even a complex number. These values are defined as Python int , Python float , and Python complex classes in Python .")
+        st. markdown("""
+        * **Integer-** This value is represented by int class. It contains positive or negative whole numbers (without fractions or decimals). In Python, there is no limit to how long an integer value can be
+        * **Float-** This value is represented by the float class. It is a real number with a floating-point representation. It is specified by a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.
+        * **Complex Numbers-** A complex number is represented by a complex class. It is specified as (real part) + (imaginary part)j . For example – 2+3j
+        """)
+        st.info("Note – type() function is used to determine the type of Python data type.")
+        st.markdown("""
+        **Example
         
 
 
