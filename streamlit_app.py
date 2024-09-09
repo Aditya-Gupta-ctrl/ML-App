@@ -451,6 +451,8 @@ Multi-Dimensional List:
 [['Basics', 'And'], ['Learn']]
 """
         st.code(code7, language="python")
+        st.subheader("Python Access List Items")
+        st.write("")
         
         
         
