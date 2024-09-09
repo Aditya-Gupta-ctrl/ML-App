@@ -28,9 +28,25 @@ if selecteds == 0:
     st.info("Preferred device are laptop, but if You are a Phone user so when You click on Python You will see a right facing arrow on the top left click to openup the menu. ")
     st.success("Thank You for visiting our web Appliction.")
            
+if selecteds == 5:
+    import ast
 
-
-
+    st.title("Python Compiler")
+    
+    code = st.text_area("Enter your Python code", height=200)
+    
+    try:
+        compiled_code = compile(code, filename="<string>", mode="exec")
+    except SyntaxError as e:
+        st.error(f"Syntax error: {e}")
+    
+    restricted_env = {}
+    exec(compiled_code, restricted_env)
+    
+    st.write("Output:")
+    st.write(restricted_env)
+    
+    
 
 #Python Tab Section
 if selecteds == 1:
@@ -320,6 +336,13 @@ print(String1[-1])
         """
         st.code(code3, language="python")
 
+        st.subheader("List Data Type in Python")
+        st.write("Lists are just like arrays, declared in other languages which is an ordered collection of data. It is very flexible as the items in a list do not need to be of the same type.")
+        st.markdown("""
+        **Creating a List in Python**
+        """)
+        st.write("Lists in Python can be created by just placing the sequence inside the square brackets[].")
+        
         
 
 
