@@ -418,6 +418,10 @@ print(String1[-1])
         **Creating a List in Python**
         """)
         st.write("Lists in Python can be created by just placing the sequence inside the square brackets[].")
+        st.markdown("""
+        **example:** This Python code demonstrates list creation and manipulation. It starts with an empty list and prints it. It creates a list containing a single string element and prints it. It creates a list with multiple string elements and prints selected elements from the list. It creates a multi-dimensional list (a list of lists) and prints it. The code showcases various ways to work with lists, including single and multi-dimensional lists.
+        """)
+        
         
         
 
