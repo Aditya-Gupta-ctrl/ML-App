@@ -226,24 +226,24 @@ if selecteds == 1:
         """)
         st.text("Input")
         code = """
-        String1 = 'Welcome to the Geeks World'
-        print("String with the use of Single Quotes: ")
-        print(String1)
-        String1 = "I'm a Geek"
-        print("\nString with the use of Double Quotes: ")
-        print(String1)
-        print(type(String1))
-        String1 = '''I'm a Geek and I live in a world of "Geeks"'''
-        print("\nString with the use of Triple Quotes: ")
-        print(String1)
-        print(type(String1))
-        
-        String1 = '''Geeks 
-                    For 
-                    Life'''
-        print("\nCreating a multiline String: ")
-        print(String1)
-        """
+String1 = 'Welcome to the Basics World'
+print("String with the use of Single Quotes: ")
+print(String1)
+String1 = "I'm a Basic"
+print("\nString with the use of Double Quotes: ")
+print(String1)
+print(type(String1))
+String1 = '''I'm a Geek and I live in a world of "Basics"'''
+print("\nString with the use of Triple Quotes: ")
+print(String1)
+print(type(String1))
+
+String1 = '''Basics 
+            For 
+            Life'''
+print("\nCreating a multiline String: ")
+print(String1)
+"""
         st.code(code, language="python")
         st.text("Output")
         code1 = """
@@ -268,14 +268,14 @@ if selecteds == 1:
         """)
         st.text("Input")
         code2 = """
-        String1 = "Basicslearn"
-        print("Initial String: ")
-        print(String1)
-        print("\nFirst character of String is: ")
-        print(String1[0])
-        print("\nLast character of String is: ")
-        print(String1[-1])
-        """
+String1 = "Basicslearn"
+print("Initial String: ")
+print(String1)
+print("\nFirst character of String is: ")
+print(String1[0])
+print("\nLast character of String is: ")
+print(String1[-1])
+"""
         st.code(code2 , language="python")
         st.text("output")
         code3 = """
