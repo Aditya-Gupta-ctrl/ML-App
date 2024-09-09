@@ -256,7 +256,7 @@ print(String1)
         I'm a Basic and I live in a world of "Basics"
         <class 'str'>
         Creating a multiline String: 
-        Geeks 
+                    Basics 
                     For 
                     Life
         """
