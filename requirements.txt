@@ -2,4 +2,3 @@ streamlit
 streamlit_antd_components
 requests
 streamlit-ace
-re
