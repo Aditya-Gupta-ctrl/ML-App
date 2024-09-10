@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit_antd_components as sac
-import requests
-import json
+from streamlit_ace import st_ace, KEYBINDINGS, LANGUAGES, THEMES
+from streamlit_gallery.utils.readme import readme
 
 
 # Set page config
@@ -32,94 +32,38 @@ if selecteds == 0:
     st.success("Thank You for visiting our web Appliction.")
            
 
-if selecteds == 5:
+if selecteds == 5:    
     
-    # Create a title for the app
-    st.title("Rextester Online Compiler")
+    def main():
+        with readme("streamlit-ace", st_ace, __file__):
+            c1, c2 = st.columns([3, 1])
     
-    # Create a text area for input
-    code = st.text_area("Enter your code here", height=300, key="input")
+            c2.subheader("Parameters")
     
-    # Create a selectbox for language selection
-    languages = {
-        "C#": 1,
-        "VB.NET": 2,
-        "F#": 3,
-        "Java": 4,
-        "Python": 5,
-        "C (gcc)": 6,
-        "C++ (gcc)": 7,
-        "Php": 8,
-        "Pascal": 9,
-        "Objective-C": 10,
-        "Haskell": 11,
-        "Ruby": 12,
-        "Perl": 13,
-        "Lua": 14,
-        "Nasm": 15,
-        "Sql Server": 16,
-        "Javascript": 17,
-        "Lisp": 18,
-        "Prolog": 19,
-        "Go": 20,
-        "Scala": 21,
-        "Scheme": 22,
-        "Node.js": 23,
-        "Python 3": 24,
-        "Octave": 25,
-        "C (clang)": 26,
-        "C++ (clang)": 27,
-        "C++ (vc++)": 28,
-        "C (vc)": 29,
-        "D": 30,
-        "R": 31,
-        "Tcl": 32,
-        "MySQL": 33,
-        "PostgreSQL": 34,
-        "Oracle": 35,
-        "Swift": 37,
-        "Bash": 38,
-        "Ada": 39,
-        "Erlang": 40,
-        "Elixir": 41,
-        "Ocaml": 42,
-        "Kotlin": 43,
-        "Brainf***": 44,
-        "Fortran": 45,
-        "Rust": 46,
-        "Clojure": 47
-    }
-    language = st.selectbox("Select language", list(languages.keys()))
+            with c1:
+                content = st_ace(
+                    placeholder=c2.text_input("Editor placeholder", value="Write your code here"),
+                    language=c2.selectbox("Language mode", options=LANGUAGES, index=121),
+                    theme=c2.selectbox("Theme", options=THEMES, index=35),
+                    keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
+                    font_size=c2.slider("Font size", 5, 24, 14),
+                    tab_size=c2.slider("Tab size", 1, 8, 4),
+                    show_gutter=c2.checkbox("Show gutter", value=True),
+                    show_print_margin=c2.checkbox("Show print margin", value=False),
+                    wrap=c2.checkbox("Wrap enabled", value=False),
+                    auto_update=c2.checkbox("Auto update", value=False),
+                    readonly=c2.checkbox("Read-only", value=False),
+                    min_lines=45,
+                    key="ace",
+                )
     
-    # Create a button to run the code
-    run_button = st.button("Run")
+                if content:
+                    st.subheader("Content")
+                    st.text(content)
     
-    # Function to run the code on Rextester
-    def run_code_on_rextester(code, language):
-        api_url = "https://rextester.com/rundotnet/api"
-        data = f"LanguageChoice={languages[language]}&Program={code}&Input=&CompilerArgs="
-        response = requests.post(api_url, data=data)
-        st.write("Response Status Code:", response.status_code)
-        st.write("Response Text:", response.text)
-        if response.status_code == 200:
-            try:
-                output = response.json()
-                st.write("Output (JSON):", output)
-                return output
-            except json.JSONDecodeError:
-                return "Error: Unable to parse JSON response"
-        else:
-            return "Error: " + response.text
     
-    # Run the code when the button is clicked
-    if run_button:
-        output = run_code_on_rextester(code, language)
-        st.write("Output:")
-        if isinstance(output, dict):
-            st.write(output.get("Result", "No output"))
-        else:
-            st.write(output)
-
+    if __name__ ==
+    
 
 
 
