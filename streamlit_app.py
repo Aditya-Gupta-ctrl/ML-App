@@ -549,12 +549,19 @@ Third last element of tuple
         st.markdown("""
         **Example:** The first two lines will print the type of the boolean values True and False, which is <class ‘bool’>. The third line will cause an error, because true is not a valid keyword in Python. Python is case-sensitive, which means it distinguishes between uppercase and lowercase letters. You need to capitalize the first letter of true to make it a boolean value.
         """)
+        st.text("Input")
         code14 = """
 print(type(True))
 print(type(False))
 print(type(true))
 """
         st.code(code14, language="python")
+        st.text("Output")
+        code15 = """
+<class 'bool'>
+<class 'bool'>
+""" 
+        st.code(code15, language="python")
 
         
 
