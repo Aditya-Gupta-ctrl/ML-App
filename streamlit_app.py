@@ -474,7 +474,52 @@ Learn
 Basics
 """
         st.code(code9, language="python")
+        st.subheader("Tuple Data Type in Python")
+        st.write("Just like a list, a tuple is also an ordered collection of Python objects. The only difference between a tuple and a list is that tuples are immutable i.e. tuples cannot be modified after it is created. It is represented by a tuple class.")
+        st.markdown("""
+        **Creating a Tuple in Python**
+        """)
+        st.write("In Python Data Types, tuples are created by placing a sequence of values separated by a ‘comma’ with or without the use of parentheses for grouping the data sequence. Tuples can contain any number of elements and of any datatype (like strings, integers, lists, etc.). Note: Tuples can also be created with a single element, but it is a bit tricky. Having one element in the parentheses is not sufficient, there must be a trailing ‘comma’ to make it a tuple.")
+        st.markdown("""
+        ** Example:** This Python code demonstrates different methods of creating and working with tuples. It starts with an empty tuple and prints it. It creates a tuple containing string elements and prints it. It converts a list into a tuple and prints the result. It creates a tuple from a string using the tuple() function. It forms a tuple with nested tuples and displays the result.
+        """)
+        st.text("Input")
+        code10 = """
+Tuple1 = ()
+print("Initial empty Tuple: ")
+print(Tuple1)
+Tuple1 = ('Basics', 'And')
+print("Tuple with the use of String: ")
+print(Tuple1)
+list1 = [1, 2, 4, 5, 6]
+print("Tuple using List: ")
+print(tuple(list1))
+Tuple1 = tuple('')
+print("Tuple with the use of function: ")
+print(Tuple1)
+Tuple1 = (0, 1, 2, 3)
+Tuple2 = ('python', 'Basic')
+Tuple3 = (Tuple1, Tuple2)
+print("Tuple with nested tuples: ")
+print(Tuple3)
+"""
+        st.code(code10, language="python")
+        st.text("Output")
+        code11 = """
+Initial empty Tuple: 
+()
+Tuple with the use of String: 
+('Basics', 'And')
+Tuple using List: 
+(1, 2, 4, 5, 6)
+Tuple with the use of function: 
+('G', 'e', 'e', 'k', 's')
+Tuple with nested tuples: 
+((0, 1, 2, 3), ('python', 'Basic'))
+"""
+        st.code(code11, language="python")
         
+
         
         
         
