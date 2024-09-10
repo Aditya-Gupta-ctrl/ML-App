@@ -412,7 +412,7 @@ print(String1[-1])
         """
         st.code(code3, language="python")
 
-        st.subheader("List Data Type in Python")
+        st.subheader("3. List Data Type in Python")
         st.write("Lists are just like arrays, declared in other languages which is an ordered collection of data. It is very flexible as the items in a list do not need to be of the same type.")
         st.markdown("""
         **Creating a List in Python**
@@ -474,7 +474,7 @@ Learn
 Basics
 """
         st.code(code9, language="python")
-        st.subheader("Tuple Data Type in Python")
+        st.subheader("4. Tuple Data Type in Python")
         st.write("Just like a list, a tuple is also an ordered collection of Python objects. The only difference between a tuple and a list is that tuples are immutable i.e. tuples cannot be modified after it is created. It is represented by a tuple class.")
         st.markdown("""
         **Creating a Tuple in Python**
@@ -528,7 +528,6 @@ print("First element of tuple")
 print(tuple1[0])
 print("Last element of tuple")
 print(tuple1[-1])
-
 print("Third last element of tuple")
 print(tuple1[-3])
 """
@@ -543,6 +542,7 @@ Third last element of tuple
 3
 """
         st.code(code13, language="python")
+        
         
         
 
