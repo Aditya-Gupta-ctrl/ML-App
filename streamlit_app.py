@@ -34,7 +34,9 @@ if selecteds == 0:
 
 if selecteds == 5:    
 
-    content = st_ace()
+    content = st_ace(
+        theme = selectbox("Theme", options=THEMES, index=35),
+    )
     
     if content:
         st.subheader("Content")
