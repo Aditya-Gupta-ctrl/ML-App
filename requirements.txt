@@ -1,2 +1,4 @@
 streamlit
 streamlit_antd_components
+streamlit-ace
+requests
