@@ -451,7 +451,7 @@ Multi-Dimensional List:
 [['Basics', 'And'], ['Learn']]
 """
         st.code(code7, language="python")
-        st.subheader("Python Access List Items")
+        st.subheader("Access List Items")
         st.write("In order to access the list items refer to the index number. Use the index operator [ ] to access an item in a list. In Python, negative sequence indexes represent positions from the end of the array. Instead of having to compute the offset as in List[len(List)-3], it is enough to just write List[-3]. Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second-last item, etc.")
         st.text("Input")
         code8 = """
@@ -518,6 +518,34 @@ Tuple with nested tuples:
 ((0, 1, 2, 3), ('python', 'Basic'))
 """
         st.code(code11, language="python")
+        st.subheader("Access Tuple Items")
+        st.write("In order to access the tuple items refer to the index number. Use the index operator [ ] to access an item in a tuple. The index must be an integer. Nested tuples are accessed using nested indexing.")
+        st.write("The code creates a tuple named ‘ tuple1′ with five elements: 1, 2, 3, 4, and 5 . Then it prints the first, last, and third last elements of the tuple using indexing.")
+        st.text("Input")
+        code12 = """
+tuple1 = tuple([1, 2, 3, 4, 5])
+print("First element of tuple")
+print(tuple1[0])
+print("Last element of tuple")
+print(tuple1[-1])
+
+print("Third last element of tuple")
+print(tuple1[-3])
+"""
+        st.code(code12, language="python")
+        st.text("Output")
+        code13 = """
+First element of tuple
+1
+Last element of tuple
+5
+Third last element of tuple
+3
+"""
+        st.code(code13, language="python")
+        
+        
+
         
 
         
