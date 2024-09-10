@@ -35,19 +35,19 @@ if selecteds == 0:
 if selecteds == 5:    
 
     content = st_ace(
-        placeholder=text_input("Editor placeholder", value="Write your code here"),
-        language=selectbox("Language mode", options=LANGUAGES, index=121),
-        theme=selectbox("Theme", options=THEMES, index=35),
-        keybinding=selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
-        font_size=slider("Font size", 5, 24, 14),
-        tab_size=slider("Tab size", 1, 8, 4),
-        show_gutter=checkbox("Show gutter", value=True),
-        show_print_margin=checkbox("Show print margin", value=False),
-        wrap=checkbox("Wrap enabled", value=False),
-        auto_update=checkbox("Auto update", value=False),
-        readonly=checkbox("Read-only", value=False),
-        min_lines=45,
-        key="ace",
+        placeholder = text_input("Editor placeholder", value="Write your code here"),
+        language = selectbox("Language mode", options=LANGUAGES, index=121),
+        theme = selectbox("Theme", options=THEMES, index=35),
+        keybinding = selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
+        font_size = slider("Font size", 5, 24, 14),
+        tab_size = slider("Tab size", 1, 8, 4),
+        show_gutter = checkbox("Show gutter", value=True),
+        show_print_margin = checkbox("Show print margin", value=False),
+        wrap = checkbox("Wrap enabled", value=False),
+        auto_update = checkbox("Auto update", value=False),
+        readonly = checkbox("Read-only", value=False),
+        min_lines = 45,
+        key = "ace",
     )
     
     if content:
