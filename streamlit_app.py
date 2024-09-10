@@ -57,7 +57,7 @@ if selecteds == 5:
             )
 
             if content:
-                st.subheader("Content")
+                st.subheader("Output")
                 st.success(content)
     
     
