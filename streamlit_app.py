@@ -58,7 +58,7 @@ if selecteds == 5:
 
             if content:
                 st.subheader("Content")
-                st.text(content)
+                st.success(content)
     
     
     if __name__ == "__main__":
