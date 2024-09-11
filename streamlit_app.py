@@ -230,9 +230,6 @@ if selecteds == 1:
 John
         """
         st.success(hemlo)
-        #st.success("45")
-        #st.success("1456.8")
-        #st.success("John")
 
 
 
