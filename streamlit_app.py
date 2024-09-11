@@ -452,18 +452,18 @@ print(Tuple3)
         st.code(code10, language="python")
         st.text("Output")
         code11 = """
-Initial empty Tuple: 
-()
-Tuple with the use of String: 
-('Basics', 'And')
-Tuple using List: 
-(1, 2, 4, 5, 6)
-Tuple with the use of function: 
-('G', 'e', 'e', 'k', 's')
-Tuple with nested tuples: 
-((0, 1, 2, 3), ('python', 'Basic'))
+Initial empty Tuple: \n
+()\n
+Tuple with the use of String:\n 
+('Basics', 'And')\n
+Tuple using List: \n
+(1, 2, 4, 5, 6)\n
+Tuple with the use of function:\n 
+('G', 'e', 'e', 'k', 's')\n
+Tuple with nested tuples: \n
+((0, 1, 2, 3), ('python', 'Basic'))\n
 """
-        st.code(code11, language="python")
+        st.success(code11)
         st.subheader("Access Tuple Items")
         st.write("In order to access the tuple items refer to the index number. Use the index operator [ ] to access an item in a tuple. The index must be an integer. Nested tuples are accessed using nested indexing.")
         st.write("The code creates a tuple named ‘ tuple1′ with five elements: 1, 2, 3, 4, and 5 . Then it prints the first, last, and third last elements of the tuple using indexing.")
@@ -480,14 +480,14 @@ print(tuple1[-3])
         st.code(code12, language="python")
         st.text("Output")
         code13 = """
-First element of tuple
-1
-Last element of tuple
-5
-Third last element of tuple
-3
+First element of tuple\n
+1\n
+Last element of tuple\n
+5\n
+Third last element of tuple\n
+3\n
 """
-        st.code(code13, language="python")
+        st.success(code13)
         
         st.subheader("3. Boolean Data Type in Python")
         st.write("Python Data type with one of the two built-in values, True or False. Boolean objects that are equal to True are truthy (true), and those equal to False are falsy (false). However non-Boolean objects can be evaluated in a Boolean context as well and determined to be true or false. It is denoted by the class bool.")
