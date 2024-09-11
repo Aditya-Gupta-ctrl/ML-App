@@ -311,7 +311,7 @@ print(type(String1))
 String1 = '''Basics 
             For 
             Life'''
-print("\nCreating a multiline String: ")
+print("Creating a multiline String: ")
 print(String1)
 """
         st.code(code, language="python")
@@ -325,8 +325,8 @@ I'm a Basic\n
 String with the use of Triple Quotes:\n 
 I'm a Basic and I live in a world of "Basics"\n
 <class 'str'>\n
-Creating a multiline String:\n 
-       \t\t Basics\n
+Creating a multiline String:\n \n
+            Basics\n
             For\n
             Life\n
 """
@@ -341,9 +341,9 @@ Creating a multiline String:\n
 String1 = "Basicslearn"
 print("Initial String: ")
 print(String1)
-print("\nFirst character of String is: ")
+print("First character of String is: ")
 print(String1[0])
-print("\nLast character of String is: ")
+print("Last character of String is: ")
 print(String1[-1])
 """
         st.code(code2 , language="python")
