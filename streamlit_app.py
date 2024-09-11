@@ -349,14 +349,14 @@ print(String1[-1])
         st.code(code2 , language="python")
         st.text("output")
         code3 = """
-        Initial String: 
-        Basicslearn
-        First character of String is: 
-        B
-        Last character of String is: 
-        n
-        """
-        st.code(code3, language="python")
+Initial String: 
+Basicslearn
+First character of String is: 
+B
+Last character of String is: 
+n
+"""
+        st.success(code3, language="python")
 
         st.subheader("3. List Data Type in Python")
         st.write("Lists are just like arrays, declared in other languages which is an ordered collection of data. It is very flexible as the items in a list do not need to be of the same type.")
