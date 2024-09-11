@@ -567,7 +567,7 @@ for i in set1:
 print("Geeks" in set1)
 """
         st.code(code18, language="python")
-        st.text(Output)
+        st.text("Output")
         code19 = """
 Initial set: \n
 {'Geeks', 'For'}\n
