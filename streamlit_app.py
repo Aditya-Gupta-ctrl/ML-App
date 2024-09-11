@@ -504,11 +504,17 @@ print(type(true))
         st.code(code14, language="python")
         st.text("Output")
         code15 = """
-<class 'bool'>
+<class 'bool'>\n
 <class 'bool'>
 """ 
-        st.code(code15, language="python")
-        st.error("Traceback (most recent call last): \n \t File /home/7e8862763fb66153d70824099d4f5fb7.py, line 8, in \n \t \t print(type(true)) \n NameError: name true is not defined")
+        st.success(code15)
+        eror = """
+Traceback (most recent call last):
+  File "/home/7e8862763fb66153d70824099d4f5fb7.py", line 8, in 
+    print(type(true))
+NameError: name 'true' is not defined
+"""
+        st.error(eror)
 
         
 
