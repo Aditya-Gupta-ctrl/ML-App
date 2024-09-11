@@ -566,7 +566,8 @@ for i in set1:
     print(i, end=" ")
 print("Geeks" in set1)
 """
-        st.code(code18, language="")
+        st.code(code18, language="python")
+        
         
 
         
