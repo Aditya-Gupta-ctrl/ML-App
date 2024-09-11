@@ -325,8 +325,8 @@ I'm a Basic\n
 String with the use of Triple Quotes:\n 
 I'm a Basic and I live in a world of "Basics"\n
 <class 'str'>\n
-Creating a multiline String:\n 
-                Basics \n
+Creating a multiline String:\n \t
+            Basics \n
             For\n
             Life\n
 """
