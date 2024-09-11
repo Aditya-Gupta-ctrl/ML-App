@@ -567,6 +567,15 @@ for i in set1:
 print("Geeks" in set1)
 """
         st.code(code18, language="python")
+        st.text(Output)
+        code19 = """
+Initial set: \n
+{'Geeks', 'For'}\n
+Elements of set: \n
+Geeks For \n
+True\n
+"""
+        st.success(code19)
         
         
 
