@@ -559,9 +559,9 @@ Set with the use of Mixed Values\n
 """)
         code18 = """
 set1 = set(["Basics", "And", "Learn"])
-print("\nInitial set")
+print("Initial set")
 print(set1)
-print("\nElements of set:")
+print("Elements of set:")
 for i in set1:
     print(i, end=" ")
 print("\n","Basics" in set1)
