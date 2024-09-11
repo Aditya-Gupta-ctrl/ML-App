@@ -225,9 +225,9 @@ if selecteds == 1:
         st.code(code, language="python")
         st.text("Output")
         hemlo = """
-45\n
-1456.8\n
-John
+age = 45\n
+salary = 1456.8\n
+name = John
         """
         st.success(hemlo)
 
@@ -552,6 +552,21 @@ Set with the use of Mixed Values\n
 {1, 2, 4, 6, 'Geeks', 'For'}\n
 """
         st.success(code17)
+        st.subheader("Access Set Items")
+        st.write("Set items cannot be accessed by referring to an index, since sets are unordered the items have no index. But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in the keyword.")
+        st.markdown("""
+**Example:** This Python code creates a set named set1 with the values “Geeks” , “For” and “Geeks” .  The code then prints the initial set, the elements of the set in a loop, and checks if the value “Geeks” is in the set using the ‘ in’ operator
+""")
+        code18 = """
+set1 = set(["Geeks", "For", "Geeks"])
+print("\nInitial set")
+print(set1)
+print("\nElements of set: ")
+for i in set1:
+    print(i, end=" ")
+print("Geeks" in set1)
+"""
+        st.code(code18, language="")
         
 
         
