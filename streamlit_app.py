@@ -604,7 +604,24 @@ print(Dict)
 """
         st.code(code20, language="python")
         st.text("Output")
-        
+        code21 = """
+Empty Dictionary: \n
+{}\n
+
+Dictionary with the use of Integer Keys: \n
+{1: 'Basics', 2: 'And', 3: 'Learn'}\n
+
+Dictionary with the use of Mixed Keys:\n 
+{'Name': 'Basics', 1: [1, 2, 3, 4]}\n
+
+Dictionary with the use of dict(): \n
+{1: 'Basics', 2: 'And', 3: 'Learn'}\n
+
+Dictionary with each item as a pair: \n
+{1: 'Basics', 2: 'And'}\n
+"""
+        st.success(code21)
+
         
 
 
