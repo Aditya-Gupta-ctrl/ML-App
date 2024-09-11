@@ -224,9 +224,15 @@ if selecteds == 1:
         """
         st.code(code, language="python")
         st.text("Output")
-        st.success("45")
-        st.success("1456.8")
-        st.success("John")
+        hemlo = """
+45
+1456.8
+John
+        """
+        st.success(hemlo)
+        #st.success("45")
+        #st.success("1456.8")
+        #st.success("John")
 
 
 
