@@ -225,8 +225,8 @@ if selecteds == 1:
         st.code(code, language="python")
         st.text("Output")
         hemlo = """
-45
-1456.8
+45\n
+1456.8\n
 John
         """
         st.success(hemlo)
