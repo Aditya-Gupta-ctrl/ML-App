@@ -555,25 +555,26 @@ Set with the use of Mixed Values\n
         st.subheader("Access Set Items")
         st.write("Set items cannot be accessed by referring to an index, since sets are unordered the items have no index. But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in the keyword.")
         st.markdown("""
-**Example:** This Python code creates a set named set1 with the values “Geeks” , “For” and “Geeks” .  The code then prints the initial set, the elements of the set in a loop, and checks if the value “Geeks” is in the set using the ‘ in’ operator
+**Example:** This Python code creates a set named set1 with the values “Basics” , “And” and “Learn” .  The code then prints the initial set, the elements of the set in a loop, and checks if the value “Learne” is in the set using the ‘ in’ operator
 """)
         code18 = """
-set1 = set(["Geeks", "For", "Geeks"])
+set1 = set(["Basics", "And", "Learn"])
 print("\nInitial set")
 print(set1)
-print("\nElements of set: ")
+print("\nElements of set:")
 for i in set1:
     print(i, end=" ")
-print("Geeks" in set1)
+print("\n","Basics" in set1)
 """
         st.code(code18, language="python")
         st.text("Output")
         code19 = """
-Initial set: \n
-{'Geeks', 'For'}\n
-Elements of set: \n
-Geeks For \n
-True\n
+Initial set\n
+{'Basics', 'Learn', 'And'}\n
+
+Elements of set:\n
+Basics Learn And \n
+ True
 """
         st.success(code19)
         
