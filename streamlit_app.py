@@ -583,7 +583,12 @@ Basics Learn And \n
         **Create a Dictionary in Python**
         """)
         st.write("In Python, a Dictionary can be created by placing a sequence of elements within curly {} braces, separated by ‘comma’. Values in a dictionary can be of any datatype and can be duplicated, whereas keys can’t be repeated and must be immutable. The dictionary can also be created by the built-in function dict(). An empty dictionary can be created by just placing it in curly braces{}. **Note –** Dictionary keys are case sensitive, the same name but different cases of Key will be treated distinctly.")
-        
+        st.write(" **Example:** This code creates and prints a variety of dictionaries. The first dictionary is empty. The second dictionary has integer keys and string values. The third dictionary has mixed keys, with one string key and one integer key. The fourth dictionary is created using the dict() function, and the fifth dictionary is created using the [(key, value)] syntax")
+        code20 = """
+
+
+
+
         
         
 
