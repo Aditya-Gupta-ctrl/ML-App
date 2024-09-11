@@ -489,7 +489,7 @@ Third last element of tuple\n
 """
         st.success(code13)
         
-        st.subheader("3. Boolean Data Type in Python")
+        st.subheader("5. Boolean Data Type in Python")
         st.write("Python Data type with one of the two built-in values, True or False. Boolean objects that are equal to True are truthy (true), and those equal to False are falsy (false). However non-Boolean objects can be evaluated in a Boolean context as well and determined to be true or false. It is denoted by the class bool.")
         st.info("Note – True and False with capital ‘T’ and ‘F’ are valid booleans otherwise python will throw an error.")
         st.markdown("""
@@ -515,8 +515,15 @@ Traceback (most recent call last):\n
 NameError: name 'true' is not defined\n
 """
         st.error(eror)
-
-        
+        st.subheader("6. Set Data Type in Python")
+        st.write("In Python Data Types, a Set is an unordered collection of data types that is iterable, mutable, and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements.")
+        st.markdown("""
+**Create a Set in Python**
+""")
+        st.write("Sets can be created by using the built-in set() function with an iterable object or a sequence by placing the sequence inside curly braces, separated by a ‘comma’. The type of elements in a set need not be the same, various mixed-up data type values can also be passed to the set.")
+        st.markdown("""
+**Example:** The code is an example of how to create sets using different types of values, such as strings , lists , and mixed values
+""")
 
         
         
