@@ -218,9 +218,9 @@ if selecteds == 1:
         # A string
         name = "John"
         
-        print(age)
-        print(salary)
-        print(name)
+        print("age = ",age)
+        print("salary =",salary)
+        print("name =",name)
         """
         st.code(code, language="python")
         st.text("Output")
