@@ -280,11 +280,11 @@ print("Type of c: ", type(c))
         st.code(code4, language="python")
         st.text("Output")
         code5 = """
-Type of a:  <class 'int'>
-Type of b:  <class 'float'>
+Type of a:  <class 'int'> \n
+Type of b:  <class 'float'> \n
 Type of c:  <class 'complex'>
 """
-        st.code(code5, language="python")
+        st.success(code5)
 
         
         st.subheader("2. Strings Data Types in Python")
