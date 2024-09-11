@@ -317,20 +317,20 @@ print(String1)
         st.code(code, language="python")
         st.text("Output")
         code1 = """
-        String with the use of Single Quotes: 
-        Welcome to the Basics World
-        String with the use of Double Quotes: 
-        I'm a Basic
-        <class 'str'>
-        String with the use of Triple Quotes: 
-        I'm a Basic and I live in a world of "Basics"
-        <class 'str'>
-        Creating a multiline String: 
-                    Basics 
-                    For 
-                    Life
-        """
-        st.code(code1, language="python")
+String with the use of Single Quotes:\n
+Welcome to the Basics World\n
+String with the use of Double Quotes:\n 
+I'm a Basic\n
+<class 'str'>\n
+String with the use of Triple Quotes:\n 
+I'm a Basic and I live in a world of "Basics"\n
+<class 'str'>\n
+Creating a multiline String:\n 
+            Basics \n
+            For\n
+            Life\n
+"""
+        st.success(code1)
         st.subheader("Accessing elements of String")
         st.write("In Python programming , individual characters of a String can be accessed by using the method of Indexing. Negative Indexing allows negative address references to access characters from the back of the String, e.g. -1 refers to the last character, -2 refers to the second last character, and so on.")
         st.markdown("""
