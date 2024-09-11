@@ -509,10 +509,10 @@ print(type(true))
 """ 
         st.success(code15)
         eror = """
-Traceback (most recent call last):
-  File "/home/7e8862763fb66153d70824099d4f5fb7.py", line 8, in 
-    print(type(true))
-NameError: name 'true' is not defined
+Traceback (most recent call last):\n
+  File "/home/7e8862763fb66153d70824099d4f5fb7.py", line 8, in \n
+    print(type(true))\n
+NameError: name 'true' is not defined\n
 """
         st.error(eror)
 
