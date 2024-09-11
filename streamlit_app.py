@@ -584,6 +584,27 @@ Basics Learn And \n
         """)
         st.write("In Python, a Dictionary can be created by placing a sequence of elements within curly {} braces, separated by ‘comma’. Values in a dictionary can be of any datatype and can be duplicated, whereas keys can’t be repeated and must be immutable. The dictionary can also be created by the built-in function dict(). An empty dictionary can be created by just placing it in curly braces{}. **Note –** Dictionary keys are case sensitive, the same name but different cases of Key will be treated distinctly.")
         st.write(" **Example:** This code creates and prints a variety of dictionaries. The first dictionary is empty. The second dictionary has integer keys and string values. The third dictionary has mixed keys, with one string key and one integer key. The fourth dictionary is created using the dict() function, and the fifth dictionary is created using the [(key, value)] syntax")
+        st.text("Input")
+        code20 = """
+Dict = {}
+print("Empty Dictionary: ")
+print(Dict)
+Dict = {1: 'Basics', 2: 'And', 3: 'Learn'}
+print("\nDictionary with the use of Integer Keys: ")
+print(Dict)
+Dict = {'Name': 'Basics', 1: [1, 2, 3, 4]}
+print("\nDictionary with the use of Mixed Keys: ")
+print(Dict)
+Dict = dict({1: 'Basics', 2: 'And', 3: 'Learn'})
+print("\nDictionary with the use of dict(): ")
+print(Dict)
+Dict = dict([(1, 'Basics'), (2, 'And')])
+print("\nDictionary with each item as a pair: ")
+print(Dict)
+"""
+        st.code(code20, language="python")
+        st.text("Output")
+        
         
 
 
