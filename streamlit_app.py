@@ -524,6 +524,35 @@ NameError: name 'true' is not defined\n
         st.markdown("""
 **Example:** The code is an example of how to create sets using different types of values, such as strings , lists , and mixed values
 """)
+        st.text("Input")
+        code16 = """
+set1 = set()
+print("Initial blank Set: ")
+print(set1)
+set1 = set("GeeksForGeeks")
+print("\nSet with the use of String: ")
+print(set1)
+set1 = set(["Geeks", "For", "Geeks"])
+print("\nSet with the use of List: ")
+print(set1)
+set1 = set([1, 2, 'Geeks', 4, 'For', 6, 'Geeks'])
+print("\nSet with the use of Mixed Values")
+print(set1)
+"""
+        st.code(code16, language="python")
+        st.text("Output")
+        code17 = """
+Initial blank Set: \n
+set()\n
+Set with the use of String: \n
+{'F', 'o', 'G', 's', 'r', 'k', 'e'}\n
+Set with the use of List: \n
+{'Geeks', 'For'}\n
+Set with the use of Mixed Values\n
+{1, 2, 4, 6, 'Geeks', 'For'}\n
+"""
+        st.success(code17)
+        
 
         
         
