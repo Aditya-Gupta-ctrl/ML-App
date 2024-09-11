@@ -349,14 +349,14 @@ print(String1[-1])
         st.code(code2 , language="python")
         st.text("output")
         code3 = """
-Initial String: 
-Basicslearn
-First character of String is: 
-B
-Last character of String is: 
-n
+Initial String: \n
+Basicslearn\n
+First character of String is:\n 
+B\n
+Last character of String is:\n 
+n\n
 """
-        st.success(code3, language="python")
+        st.success(code3)
 
         st.subheader("3. List Data Type in Python")
         st.write("Lists are just like arrays, declared in other languages which is an ordered collection of data. It is very flexible as the items in a list do not need to be of the same type.")
@@ -386,17 +386,17 @@ print(List)
         st.code(code6, language="python")
         st.text("Output")
         code7 = """
-Initial blank List: 
-[]
-List with the use of String: 
-['Basicslearn']
-List containing multiple values: 
-basics
-learn
-Multi-Dimensional List: 
-[['Basics', 'And'], ['Learn']]
+Initial blank List: \n
+[]\n
+List with the use of String: \n
+['Basicslearn']\n
+List containing multiple values: \n
+basics\n
+learn\n
+Multi-Dimensional List: \n
+[['Basics', 'And'], ['Learn']]\n
 """
-        st.code(code7, language="python")
+        st.success(code7,)
         st.subheader("Access List Items")
         st.write("In order to access the list items refer to the index number. Use the index operator [ ] to access an item in a list. In Python, negative sequence indexes represent positions from the end of the array. Instead of having to compute the offset as in List[len(List)-3], it is enough to just write List[-3]. Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second-last item, etc.")
         st.text("Input")
@@ -412,14 +412,14 @@ print(List[-3])
         st.code(code8, language="python")
         st.text("Output")
         code9 = """
-Accessing element from the list
-Basics
-Learn
-Accessing element using negative indexing
-Learn
-Basics
+Accessing element from the list\n
+Basics\n
+Learn\n
+Accessing element using negative indexing\n
+Learn\n
+Basics\n
 """
-        st.code(code9, language="python")
+        st.success(code9)
         st.subheader("4. Tuple Data Type in Python")
         st.write("Just like a list, a tuple is also an ordered collection of Python objects. The only difference between a tuple and a list is that tuples are immutable i.e. tuples cannot be modified after it is created. It is represented by a tuple class.")
         st.markdown("""
