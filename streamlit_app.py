@@ -864,4 +864,4 @@ Cell In[3], line 14\n
 ValueError: invalid literal for int() with base 10: 't'
 """
         st.error(code36)
-    
+        st.write(" **Addition of string and integer Using Explicit Conversion** ")
