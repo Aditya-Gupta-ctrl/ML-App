@@ -50,7 +50,7 @@ if selecteds == 0:
     #Display the output using st.write
     st.text("Output:")
     st.write(output.strip())
-    st.sucess(output)
+
            
 
 if selecteds == 5:    
