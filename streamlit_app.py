@@ -707,6 +707,27 @@ Mainly type casting can be done with these data type functions:
 **Python Convert Int to Float**
 Here, we are Converting Int to Float in Python with the float() function.
 """)
+        st.text("Input")
+        code26 = """
+# Python program to demonstrate 
+# type Casting 
+
+# int variable
+a = 5
+
+# typecast to float
+n = float(a)
+
+print(n)
+print(type(n))
+"""
+        st.code(code26, language="python")
+        st.text("Output")
+        code27 = """
+5.0\n
+<class 'float'>
+"""
+        st.success(code27)
 
 
 
