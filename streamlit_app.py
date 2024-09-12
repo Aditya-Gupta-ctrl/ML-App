@@ -1,4 +1,4 @@
-import streamlit as st
+eimport streamlit as st
 import streamlit_antd_components as sac
 from streamlit_ace import st_ace, KEYBINDINGS, LANGUAGES, THEMES
 from streamlit_gallery.utils.readme import readme
@@ -642,7 +642,7 @@ And\n
 Accessing a element using get:\n
 Learn
 """
-        st.success(code22)
+        st.success(code23)
         
 
         
