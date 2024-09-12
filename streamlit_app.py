@@ -881,8 +881,21 @@ Cell In[5], line 10\n
     13 print(type(n))\n
 """
         st.error(code37)
-        
-        
+
+
+
+    if selected == 8:
+        st.header("Input and Output in Python")
+        st.write("Understanding input and output operations is fundamental to Python programming. With the print() function, you can display output in various formats, while the input() function enables interaction with users by gathering input during program execution.")
+        st.subheader("Python Basic Input and Output")
+        st.write("In this introductory guide, we’ll explore the essentials of Python’s basic input and output functionalities, empowering you to efficiently interact with users and display information.")
+        st.subheader("Print Output in Python")
+        st.markdown("""
+At its core, printing output in Python is straightforward, thanks to the print() function. This function allows us to display text, variables, and expressions on the console. Let’s begin with the basic usage of the print() function:
+
+**How to Print Output in Python**
+In this example, “Hello, World!” is a string literal enclosed within double quotes. When executed, this statement will output the text to the console.
+""")
 
 
 
