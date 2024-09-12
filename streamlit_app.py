@@ -884,7 +884,7 @@ Cell In[5], line 10\n
 
 
 
-    if selected == 8:
+    if selected == 6:
         st.header("Input and Output in Python")
         st.write("Understanding input and output operations is fundamental to Python programming. With the print() function, you can display output in various formats, while the input() function enables interaction with users by gathering input during program execution.")
         st.subheader("Python Basic Input and Output")
