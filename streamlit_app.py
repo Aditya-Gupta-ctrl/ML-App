@@ -624,7 +624,7 @@ Dictionary with each item as a pair: \n
         st.subheader("Accessing Key-value in Dictionary")
         st.write("In order to access the items of a dictionary refer to its key name. Key can be used inside square brackets. There is also a method called get() that will also help in accessing the element from a dictionary.")
         st.markdown("""
-**Example:** The code in Python is used to access elements in a dictionary. Here’s what it does, It creates a dictionary Dict with keys and values as { 1: ‘Geeks’, ‘name’: ‘For’, 3: ‘Geeks’} . It prints the value of the element with the key ‘name’ , which is ‘For’ . It prints the value of the element with the key 3, which is ‘Geeks’ .
+**Example:** The code in Python is used to access elements in a dictionary. Here’s what it does, It creates a dictionary Dict with keys and values as { 1: ‘Basics’, ‘name’: ‘And’, 3: ‘Learn’} . It prints the value of the element with the key ‘name’ , which is ‘And’ . It prints the value of the element with the key 3, which is ‘Learn’ .
 """)
         
 
