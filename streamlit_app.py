@@ -838,11 +838,17 @@ print(type(b))
         code36 = """
 ---------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
+
 Cell In[3], line 14
+
      11 print(n)
+     
      12 print(type(n))
+     
 ---> 14 print(int(b))
-     15 print(type(b))
+
+     15 print(type(b))   
+     
 ValueError: invalid literal for int() with base 10: 't'
 """
         st.error(code36)
