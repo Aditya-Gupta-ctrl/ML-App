@@ -66,7 +66,6 @@ if selecteds == 5:
 
             if content:
                 st.subheader("Output")
-                st.success(content)
                 import io
                 import sys
                 old_stdout = sys.stdout
@@ -77,7 +76,6 @@ if selecteds == 5:
                 output = new_stdout.getvalue()
                 
                 #Display the output using st.write
-                st.text("Output:")
                 st.write(output.strip())
     
     
