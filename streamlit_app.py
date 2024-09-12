@@ -897,7 +897,12 @@ At its core, printing output in Python is straightforward, thanks to the print()
 
 In this example, “Hello, World!” is a string literal enclosed within double quotes. When executed, this statement will output the text to the console.
 """)
-
+        code1 = """
+print("Hello, World!")
+"""
+        st.text("Input")
+        st.code(code1, language="python")
+        
 
 
 
