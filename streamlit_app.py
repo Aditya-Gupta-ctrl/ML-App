@@ -44,7 +44,7 @@ if selecteds == 5:
 
         with c1:
             content = st_ace(
-                placeholder=c2.text("Editor placeholder", value="Write your code here"),
+                placeholder=c2.text_input("Editor placeholder", value="Write your code here"),
                 keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
                 theme=c2.selectbox("Theme", options=THEMES, index=35),
                 show_gutter=c2.checkbox("Show gutter", value=True),
