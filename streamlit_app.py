@@ -9,7 +9,7 @@ from streamlit_gallery.utils.readme import readme
 
 # Set page config
 st.set_page_config(
-    page_title="chin Tabak dam dam",
+    page_title="chin Tapak dam dam",
     page_icon=":book:",
     layout="wide",
 )
@@ -29,7 +29,7 @@ selecteds = sac.tabs([
 
 #Home Section
 if selecteds == 0:
-    st.header("Welcome to Chin Tabak Dam Dam")
+    st.header("Welcome to Chin Tapak Dam Dam")
     st.subheader("Directly go the python for learning {others things are work in progress}")
     st.info("Preferred device are laptop, but if You are a Phone user so when You click on Python You will see a right facing arrow on the top left click to openup the menu. ")
     st.success("Thank You for visiting our web Appliction.")
