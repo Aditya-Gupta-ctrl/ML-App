@@ -840,10 +840,10 @@ print(type(b))
 ValueError                                Traceback (most recent call last)
 
 Cell In[3], line 14\n
-     11 print(n)\n
-     12 print(type(n))\n     
----> 14 print(int(b))\n
-     15 print(type(b)) \n    
+    11 print(n)\n
+    12 print(type(n))\n     
+--> 14 print(int(b))\n
+    15 print(type(b)) \n    
 ValueError: invalid literal for int() with base 10: 't'
 """
         st.error(code36)
