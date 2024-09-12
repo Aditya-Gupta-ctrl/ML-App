@@ -87,6 +87,7 @@ if selecteds == 1:
                 sac.MenuItem('First Program'),
                 sac.MenuItem('Syntax & Basic'),           
                 sac.MenuItem('Variable'),
+                sac.MenuItem('Input and Output'),
                 sac.MenuItem('Data Types'),
                 sac.MenuItem('Operators'),
                 sac.MenuItem('Control Flow'),
@@ -248,7 +249,7 @@ name = John
 
     
 
-    if selected == 6:
+    if selected == 7:
         st.header("Python Data Types")
         st.write("Python data types offers, enabling you to manipulate and manage data with precision and flexibility. Additionally, we’ll delve into the dynamic world of data conversion with casting, and then move on to explore the versatile collections Python provides, including lists, tuples, sets, dictionaries, and arrays.")
         image_url="https://media.geeksforgeeks.org/wp-content/uploads/20191023173512/Python-data-structure.jpg"
@@ -880,6 +881,7 @@ Cell In[5], line 10\n
     13 print(type(n))\n
 """
         st.error(code37)
+        
         
 
 
