@@ -33,14 +33,6 @@ if selecteds == 0:
     st.subheader("Directly go the python for learning {others things are work in progress}")
     st.info("Preferred device are laptop, but if You are a Phone user so when You click on Python You will see a right facing arrow on the top left click to openup the menu. ")
     st.success("Thank You for visiting our web Appliction.")
-    
-    code = "print('Hello, World!')"
-    st.code(code, language="python")
-    
-    # Execute the code and capture the output
-
-
-
            
 
 if selecteds == 5:    
@@ -52,7 +44,7 @@ if selecteds == 5:
 
         with c1:
             content = st_ace(
-                placeholder=c2.text_input("Editor placeholder", value="Write your code here"),
+                #placeholder=c2.text_input("Editor placeholder", value="Write your code here"),
                 keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
                 theme=c2.selectbox("Theme", options=THEMES, index=35),
                 show_gutter=c2.checkbox("Show gutter", value=True),
