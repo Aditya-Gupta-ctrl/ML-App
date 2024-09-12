@@ -38,18 +38,8 @@ if selecteds == 0:
     st.code(code, language="python")
     
     # Execute the code and capture the output
-    import io
-    import sys
-    old_stdout = sys.stdout
-    new_stdout = io.StringIO()
-    sys.stdout = new_stdout
-    exec(code)
-    sys.stdout = old_stdout
-    output = new_stdout.getvalue()
-    
-    #Display the output using st.write
-    st.text("Output:")
-    st.write(output.strip())
+
+
 
            
 
@@ -77,6 +67,18 @@ if selecteds == 5:
             if content:
                 st.subheader("Output")
                 st.success(content)
+                import io
+                import sys
+                old_stdout = sys.stdout
+                new_stdout = io.StringIO()
+                sys.stdout = new_stdout
+                exec(content)
+                sys.stdout = old_stdout
+                output = new_stdout.getvalue()
+                
+                #Display the output using st.write
+                st.text("Output:")
+                st.write(output.strip())
     
     
     if __name__ == "__main__":
