@@ -801,7 +801,7 @@ print(n)
 print(type(n))
 """
         st.code(code32, language="python")
-        st.text"Output")
+        st.text("Output")
         code33 = """
 5.9\n
 <class 'float'>
