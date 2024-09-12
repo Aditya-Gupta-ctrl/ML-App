@@ -695,7 +695,17 @@ print(type(d))
         st.success(code25)
         st.subheader("Explicit Type Conversion in Python")
         st.markdown("""
+In this method, Python needs user involvement to convert the variable data type into the required data type. 
 
+**Examples of Type Casting in Python**
+Mainly type casting can be done with these data type functions:
+
+* Int(): Python Int() function take float or string as an argument and returns int type object.
+* float(): Python float() function take int or string as an argument and return float type object.
+* str(): Python str() function takes float or int as an argument and returns string type object.
+
+**Python Convert Int to Float**
+Here, we are Converting Int to Float in Python with the float() function.
 """)
 
 
