@@ -9,7 +9,7 @@ from streamlit_gallery.utils.readme import readme
 
 # Set page config
 st.set_page_config(
-    page_title="chik dabak dam dam",
+    page_title="chin dabak dam dam",
     page_icon=":book:",
     layout="wide",
 )
