@@ -730,6 +730,7 @@ print(type(n))
         st.success(code27)
         st.markdown("""
 **Python Convert Float to Int**
+
 Here, we are Converting Float to int datatype in Python with int() function.
 """)
         st.text("Input")
@@ -772,7 +773,7 @@ n = str(a)
 print(n)
 print(type(n))
 """
-        st.code(code30, languge="python")
+        st.code(code30, language="python")
         st.text("Output")
         code31 = """
 5\n
