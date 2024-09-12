@@ -626,6 +626,23 @@ Dictionary with each item as a pair: \n
         st.markdown("""
 **Example:** The code in Python is used to access elements in a dictionary. Here’s what it does, It creates a dictionary Dict with keys and values as { 1: ‘Basics’, ‘name’: ‘And’, 3: ‘Learn’} . It prints the value of the element with the key ‘name’ , which is ‘And’ . It prints the value of the element with the key 3, which is ‘Learn’ .
 """)
+        st.text("Input")
+        code22 = """
+Dict = {1: 'Basics', 'name': 'And', 3: 'Learn'}
+print("Accessing a element using key:")
+print(Dict['name'])
+print("Accessing a element using get:")
+print(Dict.get(3))
+"""
+        st.code(code22, language="python")
+        st.text("Output")
+        code23 = """
+Accessing a element using key:\n
+And\n
+Accessing a element using get:\n
+Learn
+"""
+        st.success(code22)
         
 
         
