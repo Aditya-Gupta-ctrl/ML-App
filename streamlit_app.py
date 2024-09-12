@@ -781,7 +781,11 @@ print(type(n))
 <class 'str'>
 """
         st.success(code31)
-        
+        st.markdown("""
+Python Convert String to float
+
+Here, we are casting string data type into float data type with float() function.
+""")
 
 
 
