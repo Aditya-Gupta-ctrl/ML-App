@@ -865,3 +865,35 @@ ValueError: invalid literal for int() with base 10: 't'
 """
         st.error(code36)
         st.write(" **Addition of string and integer Using Explicit Conversion** ")
+        st.text("Input")
+        code36 = """
+# integer variable
+a = 5
+# string variable
+b = 't'
+
+# typecast to int
+n = a+b
+
+print(n)
+print(type(n))
+"""
+        st.code(code36)
+        st.text("Output")
+        code37 = """
+TypeError         \t\t\t\t                        Traceback (most recent call last)
+Cell In[5], line 10\n
+    7 b = 't'\n
+    9 # typecast to int\n
+--->10 n = a+b\n
+    12 print(n)\n
+    13 print(type(n))\n
+"""
+        st.error(code37)
+        
+
+
+
+
+
+
