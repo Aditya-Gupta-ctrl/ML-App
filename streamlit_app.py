@@ -53,8 +53,8 @@ if selecteds == 5:
         with c1:
             content = st_ace(
                 placeholder=c2.text_input("Editor placeholder", value="Write your code here"),
-                language=c2.selectbox("Language mode", options=LANGUAGES, index=121),
                 keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
+                theme=c2.selectbox("Theme", options=THEMES, index=35),
                 show_gutter=c2.checkbox("Show gutter", value=True),
                 show_print_margin=c2.checkbox("Show print margin", value=False),
                 wrap=c2.checkbox("Wrap enabled", value=False),
