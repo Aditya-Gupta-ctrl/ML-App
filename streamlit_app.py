@@ -34,23 +34,22 @@ if selecteds == 0:
     st.info("Preferred device are laptop, but if You are a Phone user so when You click on Python You will see a right facing arrow on the top left click to openup the menu. ")
     st.success("Thank You for visiting our web Appliction.")
     
-    code = "print('Hello, World!')"
-    code1 = "print(2+4)"
-    st.code(code, language="python")
+    #code = "print('Hello, World!')"
+    #st.code(code, language="python")
     
     # Execute the code and capture the output
-    import io
-    import sys
-    old_stdout = sys.stdout
-    new_stdout = io.StringIO()
-    sys.stdout = new_stdout
-    exec(code,code1)
-    sys.stdout = old_stdout
-    output = new_stdout.getvalue()
+    #import io
+    #import sys
+    #old_stdout = sys.stdout
+    #new_stdout = io.StringIO()
+    #sys.stdout = new_stdout
+    #exec(code)
+    #sys.stdout = old_stdout
+    #output = new_stdout.getvalue()
     
     # Display the output using st.write
-    st.write("Output:")
-    st.write(output.strip())
+    #st.write("Output:")
+    #st.write(output.strip())
            
 
 if selecteds == 5:    
