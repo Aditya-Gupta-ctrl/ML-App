@@ -309,7 +309,7 @@ print(String1)
 print(type(String1))
 
 String1 = '''Basics 
-            For 
+            And 
             Life'''
 print("Creating a multiline String: ")
 print(String1)
@@ -327,7 +327,7 @@ I'm a Basic and I live in a world of "Basics"\n
 <class 'str'>\n
 Creating a multiline String:\n \n
             Basics\n
-            For\n
+            And\n
             Life\n
 """
         st.success(code1)
@@ -621,6 +621,12 @@ Dictionary with each item as a pair: \n
 {1: 'Basics', 2: 'And'}\n
 """
         st.success(code21)
+        st.subheader("Accessing Key-value in Dictionary")
+        st.write("In order to access the items of a dictionary refer to its key name. Key can be used inside square brackets. There is also a method called get() that will also help in accessing the element from a dictionary.")
+        st.markdown("""
+**Example:** The code in Python is used to access elements in a dictionary. Here’s what it does, It creates a dictionary Dict with keys and values as { 1: ‘Geeks’, ‘name’: ‘For’, 3: ‘Geeks’} . It prints the value of the element with the key ‘name’ , which is ‘For’ . It prints the value of the element with the key 3, which is ‘Geeks’ .
+""")
+        
 
         
 
