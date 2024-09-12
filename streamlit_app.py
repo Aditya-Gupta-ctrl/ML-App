@@ -65,7 +65,7 @@ if selecteds == 5:
             )
 
             if content:
-                st.subheader("Output")
+                st.info("Output")
                 import io
                 import sys
                 old_stdout = sys.stdout
