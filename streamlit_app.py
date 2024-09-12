@@ -728,17 +728,57 @@ print(type(n))
 <class 'float'>
 """
         st.success(code27)
+        st.markdown("""
+**Python Convert Float to Int**
+Here, we are Converting Float to int datatype in Python with int() function.
+""")
+        st.text("Input")
+        code28 = """
+# Python program to demonstrate 
+# type Casting 
 
+# int variable
+a = 5.9
 
+# typecast to int
+n = int(a)
 
-        
-        
+print(n)
+print(type(n))
+"""
+        st.code(code28, language="python")
+        st.text("Output")
+        code29 = """
+5\n
+<class 'int'>
+"""
+        st.success(code29)
+        st.markdown("""
+**Python Convert int to String** 
+Here, we are Converting int to String datatype in Python with str() function.
+""")
+        st.text("Input")
+        code30 = """
+# Python program to demonstrate 
+# type Casting 
 
-        
-        
-        
-        
+# int variable
+a = 5
 
+# typecast to str
+n = str(a)
+
+print(n)
+print(type(n))
+"""
+        st.code(code30, languge="python")
+        st.text("Output")
+        code31 = """
+5\n
+<class 'str'>
+"""
+        st.success(code31)
+        
 
 
 
