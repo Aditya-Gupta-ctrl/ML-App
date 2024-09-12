@@ -859,7 +859,7 @@ ValueError                                Traceback (most recent call last)
 Cell In[3], line 14\n
     11 print(n)\n
     12 print(type(n))\n     
-    14 print(int(b))\n  <----
+    14 print(int(b))  <----\n
     15 print(type(b)) \n    
 ValueError: invalid literal for int() with base 10: 't'
 """
@@ -885,7 +885,7 @@ TypeError         \t\t\t\t                        Traceback (most recent call la
 Cell In[5], line 10\n
     7 b = 't'\n
     9 # typecast to int\n
-    10 n = a+b\n <----
+    10 n = a+b <----\n
     12 print(n)\n
     13 print(type(n))\n
 """
