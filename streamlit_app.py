@@ -755,6 +755,7 @@ print(type(n))
         st.success(code29)
         st.markdown("""
 **Python Convert int to String** 
+
 Here, we are Converting int to String datatype in Python with str() function.
 """)
         st.text("Input")
