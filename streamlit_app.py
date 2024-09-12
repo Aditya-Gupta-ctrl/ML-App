@@ -645,7 +645,7 @@ Accessing a element using get:\n
 Learn
 """
         st.success(code23)
-        st.subheader("Type Casting in Python")
+        st.subheader("7. Type Casting in Python")
         st.markdown("""
 Type Casting is the method to convert the Python variable datatype into a certain data type in order to perform the required operation by users. In this article, we will see the various techniques for typecasting. There can be two types of 
 Type Casting in Python:
@@ -653,9 +653,50 @@ Type Casting in Python:
 * Python Implicit Type Conversion
 * Python Explicit Type Conversion
 """)
+        st.subheader("Implicit Type Conversion in Python")
+        st.write("In this, method, Python converts the datatype into another datatype automatically. Users don’t have to involve in this process.")
+        st.text("Input")
+        code24 = """
+# Python program to demonstrate 
+# implicit type Casting 
 
-        
+# Python automatically converts 
+# a to int 
+a = 7
+print(type(a)) 
 
+# Python automatically converts 
+# b to float 
+b = 3.0
+print(type(b)) 
+
+# Python automatically converts 
+# c to float as it is a float addition 
+c = a + b 
+print(c) 
+print(type(c))
+
+# Python automatically converts 
+# d to float as it is a float multiplication
+d = a * b
+print(d)
+print(type(d))
+"""
+        st.code(code24, language="python")
+        st.text("Output")
+        code25 = """
+<class 'int'>\n
+<class 'float'>\n
+10.0\n
+<class 'float'>\n
+21.0\n
+<class 'float'>
+"""
+        st.success(code25)
+        st.subheader("Explicit Type Conversion in Python")
+        st.markdown("""
+
+""")
 
 
 
