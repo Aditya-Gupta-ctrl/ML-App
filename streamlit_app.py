@@ -255,7 +255,6 @@ name = John
         * **Python Tuples**
         * **Python Sets**
         * **Python Dictionary**
-        * **Python Arrays**
         * **Type Casting**
         """)
         st.subheader("1. Numeric Data Types in Python")
@@ -646,7 +645,13 @@ Accessing a element using get:\n
 Learn
 """
         st.success(code23)
-        
+        st.subheader("Type Casting in Python")
+        st.markdown("""
+Type Casting is the method to convert the Python variable datatype into a certain data type in order to perform the required operation by users. In this article, we will see the various techniques for typecasting. There can be two types of 
+Type Casting in Python:
+
+* Python Implicit Type Conversion
+* Python Explicit Type Conversion
 
         
 
