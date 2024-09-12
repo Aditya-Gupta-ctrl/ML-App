@@ -894,6 +894,7 @@ Cell In[5], line 10\n
 At its core, printing output in Python is straightforward, thanks to the print() function. This function allows us to display text, variables, and expressions on the console. Let’s begin with the basic usage of the print() function:
 
 **How to Print Output in Python**
+
 In this example, “Hello, World!” is a string literal enclosed within double quotes. When executed, this statement will output the text to the console.
 """)
 
