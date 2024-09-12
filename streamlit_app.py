@@ -801,8 +801,49 @@ print(n)
 print(type(n))
 """
         st.code(code32, language="python")
+        st.text"Output")
+        code33 = """
+5.9\n
+<class 'float'>
+"""
+        st.success(code33)
+        st.markdown("""
+**Python Convert string to int**
 
+Here, we are Converting string to int datatype in Python with int() function. If the given string is not number, then it will throw an error.
+""")
+        st.text("Input")
+        code34 = """
+# string variable
+a = "5"
+b = 't'
 
+# typecast to int
+n = int(a)
 
-        
+print(n)
+print(type(n))
+
+print(int(b))
+print(type(b))
+"""
+        st.code(code34)
+        st.text("Output")
+        code35 = """
+5\n
+<class 'int'>
+"""
+        st.success(code35)
+        st.text("Error")
+        code36 = """
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[3], line 14
+     11 print(n)
+     12 print(type(n))
+---> 14 print(int(b))
+     15 print(type(b))
+ValueError: invalid literal for int() with base 10: 't'
+"""
+        st.error(code36)
     
