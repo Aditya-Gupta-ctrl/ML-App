@@ -782,10 +782,25 @@ print(type(n))
 """
         st.success(code31)
         st.markdown("""
-Python Convert String to float
+**Python Convert String to float**
 
 Here, we are casting string data type into float data type with float() function.
 """)
+        st.text("Input")
+        code32 = """
+# Python program to demonstrate 
+# type Casting 
+
+# string variable
+a = "5.9"
+
+# typecast to float
+n = float(a)
+
+print(n)
+print(type(n))
+"""
+        st.code(code32, language="python")
 
 
 
