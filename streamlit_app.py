@@ -559,6 +559,7 @@ Set with the use of Mixed Values\n
         st.markdown("""
 **Example:** This Python code creates a set named set1 with the values “Basics” , “And” and “Learn” .  The code then prints the initial set, the elements of the set in a loop, and checks if the value “Learne” is in the set using the ‘ in’ operator
 """)
+        st.text("Input")
         code18 = """
 set1 = set(["Basics", "And", "Learn"])
 print("Initial set")
