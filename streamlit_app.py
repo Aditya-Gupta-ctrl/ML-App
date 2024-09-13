@@ -57,7 +57,7 @@ if selecteds == 5:
             sys.stdout = old_stdout
             output = new_stdout.getvalue()
             st.info("Output")
-            output_area_placeholder.code(output.strip(), language="python", height=300)
+            output_area_placeholder.text_area("Output:", value=output.strip(), height=300)
         except Exception as e:
             st.error(f"Error: {e}")
     
