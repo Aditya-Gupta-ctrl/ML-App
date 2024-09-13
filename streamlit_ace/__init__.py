@@ -42,7 +42,7 @@ def st_ace(
     placeholder="",
     height=None,
     language="plain_text",
-    theme="chrome",
+    theme="twilight",
     keybinding="vscode",
     min_lines=12,
     max_lines=None,
