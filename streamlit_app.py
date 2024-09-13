@@ -41,7 +41,7 @@ if selecteds == 5:
     
     # Create input and output text areas
     input_code = st.text_area("Enter your code:", height=300)
-    output_area = st.text_area("Output:", height=300, disabled=True)
+    output_area_placeholder = st.empty()
     
     # Create a button to compile and run the code
     run_button = st.button("Run Code")
@@ -57,7 +57,7 @@ if selecteds == 5:
             sys.stdout = old_stdout
             output = new_stdout.getvalue()
             st.info("Output")
-            output_area.value = output.strip()
+            output_area_placeholder.text_area("Output:", value=output.strip(), height=300)
         except Exception as e:
             st.error(f"Error: {e}")
     
