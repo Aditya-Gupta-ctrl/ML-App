@@ -924,6 +924,41 @@ print("Amount: ${:.2f}".format(amount))
 Amount: $150.75
 """
         st.success(code6)
+        st.write(" **Example 2:** Using sep and end parameter")
+        code7 = """
+# end Parameter with '@'
+print("Python", end='@')
+print("BasicsLearn")
+
+
+# Seprating with Comma
+print('B', 'A', 'L', sep='')
+
+# for formatting a date
+print('09', '12', '2016', sep='-')
+
+# another example
+print('pratik', 'Basicsandlearn', sep='@')
+"""
+        st.code(code7, language="python")
+        st.text("Output")
+        code8 = """
+Python@BasicsLearn
+BAL
+09-12-2016
+pratik@Basicsandlearn
+"""
+        st.success(code8)
+        st.write(" **Example 3:** Using f-string")
+        st.text("Input")
+        code9 = """
+name = 'Tushar'
+age = 23
+print(f"Hello, My name is {name} and I'm {age} years old.")
+"""
+        st.code(code9, language="python")
+        
+
 
 
 
