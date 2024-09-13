@@ -40,22 +40,22 @@ if selecteds == 5:
     st.title("Code Compiler")
     
     # Create input and output text areas
-    input_code = st.text_area("Enter your code:", height=300)
+    input_code: str = st.text_area("Enter your code:", height=300)
     output_area_placeholder = st.empty()
     
     # Create a button to compile and run the code
-    run_button = st.button("Run Code")
+    run_button: bool = st.button("Run Code")
     
     # Define a function to compile and run the code
-    def compile_and_run(code):
+    def compile_and_run(code: str) -> None:
         try:
             # Redirect output to a string
-            old_stdout = sys.stdout
-            new_stdout = io.StringIO()
+            old_stdout: io.TextIOWrapper = sys.stdout
+            new_stdout: io.StringIO = io.StringIO()
             sys.stdout = new_stdout
             exec(code)
             sys.stdout = old_stdout
-            output = new_stdout.getvalue()
+            output: str = new_stdout.getvalue()
             output_area_placeholder.text_area("Output:", value=output.strip(), height=300)
         except Exception as e:
             st.error(f"Error: {e}")
