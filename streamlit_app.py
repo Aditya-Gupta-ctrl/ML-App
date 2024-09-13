@@ -896,7 +896,27 @@ print("Hello, World!")
 Hello, World!
 """
         st.success(code2)
-        
+        st.subheader("Print Single and Multiple variable in Python")
+        st.write("The code assigns values to variables name and age, then prints them with labels.")
+        st.text("Input")
+        code3 = """
+name = "Alice"
+age = 30
+print("Name:", name, "Age:", age)
+"""
+        st.code(code3, language="python")
+        st.text("Output")
+        code4 = """
+Name: Alice Age: 30
+"""
+        st.code(code4, language="python")
+        st.subheader("Format Output Handling in Python")
+        st.write("Output formatting in Python with various techniques including the format() method, manipulation of the sep and end parameters, f-strings, and the versatile % operator. These methods enable precise control over how data is displayed, enhancing the readability and effectiveness of your Python programs.")
+        st.write(" **Example 1:**  Using Format()")
+
+
+
+
 
 
 
