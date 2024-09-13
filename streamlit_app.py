@@ -40,7 +40,7 @@ if selecteds == 5:
     st.title("Code Compiler")
     
     # Create input and output text areas
-    input_code = st.code("Enter your code:", language="python", height=300)
+    input_code = st.text_area("Enter your code:", height=300)
     output_area_placeholder = st.empty()
     
     # Create a button to compile and run the code
