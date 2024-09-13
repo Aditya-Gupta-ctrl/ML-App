@@ -57,14 +57,13 @@ if selecteds == 5:
             sys.stdout = old_stdout
             output = new_stdout.getvalue()
             st.info("Output")
-            st.write(output.strip())
+            output_area.value = output.strip()
         except Exception as e:
             st.error(f"Error: {e}")
     
     # Run the code when the button is clicked
     if run_button:
         compile_and_run(input_code)
-
 
 
 
