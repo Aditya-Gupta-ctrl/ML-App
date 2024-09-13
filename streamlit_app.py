@@ -34,18 +34,36 @@ if selecteds == 0:
            
 
 if selecteds == 5:    
-    st.info("Output")
     import io
     import sys
-    old_stdout = sys.stdout
-    new_stdout = io.StringIO()
-    sys.stdout = new_stdout
-    exec(content)
-    sys.stdout = old_stdout
-    output = new_stdout.getvalue()
     
-    #Display the output using st.write
-    st.write(output.strip())
+    st.title("Code Compiler")
+    
+    # Create input and output text areas
+    input_code = st.text_area("Enter your code:", height=300)
+    output_area = st.text_area("Output:", height=300, disabled=True)
+    
+    # Create a button to compile and run the code
+    run_button = st.button("Run Code")
+    
+    # Define a function to compile and run the code
+    def compile_and_run(code):
+        try:
+            # Redirect output to a string
+            old_stdout = sys.stdout
+            new_stdout = io.StringIO()
+            sys.stdout = new_stdout
+            exec(code)
+            sys.stdout = old_stdout
+            output = new_stdout.getvalue()
+            st.info("Output")
+            st.write(output.strip())
+        except Exception as e:
+            st.error(f"Error: {e}")
+    
+    # Run the code when the button is clicked
+    if run_button:
+        compile_and_run(input_code)
 
 
 
