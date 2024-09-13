@@ -891,6 +891,11 @@ print("Hello, World!")
 """
         st.text("Input")
         st.code(code1, language="python")
+        st.text("Output")
+        code2 = """
+Hello, World!
+"""
+        st.success(code2)
         
 
 
