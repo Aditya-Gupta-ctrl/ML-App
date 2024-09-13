@@ -957,7 +957,11 @@ age = 23
 print(f"Hello, My name is {name} and I'm {age} years old.")
 """
         st.code(code9, language="python")
-        
+        st.text("Output")
+        code10 = """
+Hello, My name is Tushar and I'm 23 years old.
+"""
+        st.success(code10)
 
 
 
