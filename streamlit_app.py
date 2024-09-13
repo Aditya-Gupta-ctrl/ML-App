@@ -909,7 +909,7 @@ print("Name:", name, "Age:", age)
         code4 = """
 Name: Alice Age: 30
 """
-        st.code(code4, language="python")
+        st.success(code4)
         st.subheader("Format Output Handling in Python")
         st.write("Output formatting in Python with various techniques including the format() method, manipulation of the sep and end parameters, f-strings, and the versatile % operator. These methods enable precise control over how data is displayed, enhancing the readability and effectiveness of your Python programs.")
         st.write(" **Example 1:**  Using Format()")
