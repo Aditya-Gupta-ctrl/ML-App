@@ -40,7 +40,7 @@ if selecteds == 5:
     st.title("Code Compiler")
     
     # Create input and output text areas
-    input_code = st.text_area("Enter your code:", height=300)
+    input_code = st.code("Enter your code:", language="python", height=300)
     output_area_placeholder = st.empty()
     
     # Create a button to compile and run the code
@@ -56,7 +56,8 @@ if selecteds == 5:
             exec(code)
             sys.stdout = old_stdout
             output = new_stdout.getvalue()
-            output_area_placeholder.text_area("Output:", value=output.strip(), height=300)
+            st.info("Output")
+            output_area_placeholder.code(output.strip(), language="python", height=300)
         except Exception as e:
             st.error(f"Error: {e}")
     
