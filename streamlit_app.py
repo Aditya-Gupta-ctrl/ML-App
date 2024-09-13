@@ -3,8 +3,6 @@
 
 import streamlit as st
 import streamlit_antd_components as sac
-from streamlit_ace import st_ace, KEYBINDINGS, LANGUAGES, THEMES
-from streamlit_gallery.utils.readme import readme
 
 
 # Set page config
@@ -36,43 +34,18 @@ if selecteds == 0:
            
 
 if selecteds == 5:    
-
-    def main():
-        c1, c2 = st.columns([3, 1])
-
-        c2.subheader("Parameters")
-
-        with c1:
-            content = st_ace(
-                placeholder=c2.text_input("Editor placeholder", value="Write your code here"),
-                keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
-                theme=c2.selectbox("Theme", options=THEMES, index=35),
-                show_gutter=c2.checkbox("Show gutter", value=True),
-                show_print_margin=c2.checkbox("Show print margin", value=False),
-                wrap=c2.checkbox("Wrap enabled", value=False),
-                auto_update=c2.checkbox("Auto update", value=False),
-                readonly=c2.checkbox("Read-only", value=False),
-                min_lines=45,
-                key="ace",
-            )
-
-            if content:
-                st.info("Output")
-                import io
-                import sys
-                old_stdout = sys.stdout
-                new_stdout = io.StringIO()
-                sys.stdout = new_stdout
-                exec(content)
-                sys.stdout = old_stdout
-                output = new_stdout.getvalue()
-                
-                #Display the output using st.write
-                st.write(output.strip())
+    st.info("Output")
+    import io
+    import sys
+    old_stdout = sys.stdout
+    new_stdout = io.StringIO()
+    sys.stdout = new_stdout
+    exec(content)
+    sys.stdout = old_stdout
+    output = new_stdout.getvalue()
     
-    
-    if __name__ == "__main__":
-        main()
+    #Display the output using st.write
+    st.write(output.strip())
 
 
 
