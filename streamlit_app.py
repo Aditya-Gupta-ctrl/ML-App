@@ -913,6 +913,17 @@ Name: Alice Age: 30
         st.subheader("Format Output Handling in Python")
         st.write("Output formatting in Python with various techniques including the format() method, manipulation of the sep and end parameters, f-strings, and the versatile % operator. These methods enable precise control over how data is displayed, enhancing the readability and effectiveness of your Python programs.")
         st.write(" **Example 1:**  Using Format()")
+        st.text("Input")
+        code5 = """
+amount = 150.75
+print("Amount: ${:.2f}".format(amount))
+"""
+        st.code(code5, language="python")
+        st.text("Output")
+        code6 = """
+Amount: $150.75
+"""
+        st.success(code6)
 
 
 
