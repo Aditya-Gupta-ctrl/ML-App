@@ -31,6 +31,32 @@ if selecteds == 0:
     st.subheader("Directly go the python for learning {others things are work in progress}")
     st.info("Preferred device are laptop, but if You are a Phone user so when You click on Python You will see a right facing arrow on the top left click to openup the menu. ")
     st.success("Thank You for visiting our web Appliction.")
+    from dotenv import load_dotenv
+    import os
+    import google.generativeai as ggi
+    
+    load_dotenv(".env")
+    
+    fetcheed_api_key = os.getenv("API_KEY")
+    ggi.configure(api_key = fetcheed_api_key)
+    
+    model = ggi.GenerativeModel("gemini-pro") 
+    chat = model.start_chat()
+    
+    def LLM_Response(question):
+        response = chat.send_message(question,stream=True)
+        return response
+    
+    st.title("Chat Application using Gemini Pro")
+    
+    user_quest = st.text_input("Ask a question:")
+    btn = st.button("Ask")
+    
+    if btn and user_quest:
+        result = LLM_Response(user_quest)
+        st.subheader("Response : ")
+        for word in result:
+            st.text(word.text)
            
 
 if selecteds == 5:    
