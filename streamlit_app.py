@@ -1075,7 +1075,7 @@ What color is rose?: Red\n
 Red
 """
         st.success(code20)
-        st.write(" *****How to Print Numbers in Python***** ")
+        st.write(" **How to Print Numbers in Python** ")
         st.write("The code prompts the user to input an integer representing the number of roses, converts the input to an integer using typecasting, and then prints the integer value.")
         st.text("Input")
         code21 = """
@@ -1091,6 +1091,16 @@ How many roses?: 8\n
 8
 """
         st.success(code22)
+        st.write(" **How to Print Float/Decimal Number in Python** ")
+        st.write("The code prompts the user to input the price of each rose as a floating-point number, converts the input to a float using typecasting, and then prints the price.")
+        st.text("Input")     
+        code23 = """
+# Taking input as float
+# Typecasting to float
+price = float(input("Price of each rose?: "))
+print(price)
+"""
+        st.code(code23, language="python")
         
 
 
