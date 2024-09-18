@@ -1101,8 +1101,40 @@ price = float(input("Price of each rose?: "))
 print(price)
 """
         st.code(code23, language="python")
+        st.text("Output")
+        code24 = """
+Price of each rose?: 50.30\n
+50.3
+"""
+        st.success(code24)
+        st.write(" **Find DataType of Input in Python** ")
+        st.write("In the given example, we are printing the type of variable x. We will determine the type of an object in Python.")
+        st.text("Input")
+        code25 = """
+a = "Hello World"
+b = 10
+c = 11.22
+d = ("Basics", "and", "Learn")
+e = ["Basics", "and", "Learn"]
+f = {"Basics": 1, "and":2, "Learn":3}
+
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(f))
+"""
+        st.code(code25, language="python")
+        st.text("Output")
+        code26 = """
+<class 'str'>\n
+<class 'int'>\n
+<class 'float'>\n
+<class 'tuple'>\n
+<class 'list'>\n
+<class 'dict'>\n
+"""
+        st.success(code26)
         
-
-
-
-
