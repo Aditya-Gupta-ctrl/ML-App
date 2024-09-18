@@ -943,9 +943,9 @@ print('pratik', 'Basicsandlearn', sep='@')
         st.code(code7, language="python")
         st.text("Output")
         code8 = """
-Python@BasicsLearn
-BAL
-09-12-2016
+Python@BasicsLearn\n
+BAL\n
+09-12-2016\n
 pratik@Basicsandlearn
 """
         st.success(code8)
