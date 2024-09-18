@@ -962,7 +962,15 @@ print(f"Hello, My name is {name} and I'm {age} years old.")
 Hello, My name is Tushar and I'm 23 years old.
 """
         st.success(code10)
-
+        st.write(" **Example 4:** Using % Operator")
+        st.markdown(""" 
+We can use ‘%’ operator. % values are replaced with zero or more value of elements. The formatting using % is similar to that of ‘printf’ in the C programming language.
+* %d –integer
+* %f – float
+* %s – string
+* %x –hexadecimal
+* %o – octal
+""")
 
 
 
