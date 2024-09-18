@@ -1052,7 +1052,7 @@ name = input("Enter your name: ")
 print("Hello,", name, "! Welcome!")
 """
         st.code(code17, language="python")
-        st.output("Output")
+        st.text("Output")
         code18 = """
 Enter your name: BasicsLearn\n
 Hello, BasicsLearn ! Welcome!
