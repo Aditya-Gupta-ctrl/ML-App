@@ -1043,8 +1043,7 @@ You are an adult.
         st.success(code16)
         st.subheader("Taking input in Python")
         st.write(" **Python input() function** is used to take user input. By default, it returns the user input in form of a string.")
-
-
+        st.info("Syntax: input(prompt)")
 
 
 
