@@ -1075,7 +1075,7 @@ What color is rose?: Red\n
 Red
 """
         st.success(code20)
-        st.write(" **How to Print Numbers in Python** ")
+        st.write(" ***How to Print Numbers in Python*** ")
         st.write("The code prompts the user to input an integer representing the number of roses, converts the input to an integer using typecasting, and then prints the integer value.")
         st.text("Input")
         code21 = """
