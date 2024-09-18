@@ -971,9 +971,22 @@ We can use ‘%’ operator. % values are replaced with zero or more value of el
 * %x –hexadecimal
 * %o – octal
 """)
+        st.text("Input")
+        code11 = """
+# Taking input from the user
+num = int(input("Enter a value: "))
 
+add = num + 5
 
-
+# Output
+print("The sum is %d" %add)
+"""
+        st.code(code11, language="python")
+        st.text("Output")
+        code12 = """
+Enter a value: 50The sum is 55
+"""
+        st.success(code12)
 
 
 
