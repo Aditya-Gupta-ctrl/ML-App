@@ -1085,10 +1085,13 @@ n = int(input("How many roses?: "))
 print(n)
 """
         st.code(code21, language="python")
+        st.text("Output")
+        code22 = """
+How many roses?: 8\n
+8
+"""
+        st.success(code22)
         
-
-
-
 
 
 
