@@ -987,6 +987,65 @@ print("The sum is %d" %add)
 Enter a value: 50The sum is 55
 """
         st.success(code12)
+        st.write(" **Take Multiple Input in Python** ")
+        st.write("The code takes input from the user in a single line, splitting the values entered by the user into separate variables for each value using the split() method. Then, it prints the values with corresponding labels, either two or three, based on the number of inputs provided by the user.")
+        st.text("Input")
+        code13 = """
+# taking two inputs at a time
+x, y = input("Enter two values: ").split()
+print("Number of boys: ", x)
+print("Number of girls: ", y)
+ 
+# taking three inputs at a time
+x, y, z = input("Enter three values: ").split()
+print("Total number of students: ", x)
+print("Number of boys is : ", y)
+print("Number of girls is : ", z)
+"""
+        st.code(code13, language="python")
+        st.text("Output")
+        code14 = """
+Enter two values: 5 10\n
+Number of boys:  5  \n
+Number of girls:  10\n
+Enter three values: 5 10 15\n
+Total number of students:  5\n
+Number of boys is :  10     \n
+Number of girls is :  15  
+"""
+        st.success(code14)
+        st.write(" **Take Conditional Input from user in Python** ")
+        st.write("In this example, the program prompts the user to enter their age. The input is converted to an integer using the int() function. Then, the program uses conditional statements to check the age range and prints a message based on whether the user is a minor, an adult, or a senior citizen.")
+        st.text("Input")
+        code15 = """
+# Prompting the user for input
+age_input = input("Enter your age: ")
+
+# Converting the input to an integer
+age = int(age_input)
+
+# Checking conditions based on user input
+if age < 0:
+    print("Please enter a valid age.")
+elif age < 18:
+    print("You are a minor.")
+elif age >= 18 and age < 65:
+    print("You are an adult.")
+else:
+    print("You are a senior citizen.")
+"""
+        st.code(code15, language="python")
+        st.text("output")
+        code16 = """
+Enter your age: 22\n
+You are an adult.
+"""
+        st.success(code16)
+        st.subheader("Taking input in Python")
+        st.write(" **Python input() function** is used to take user input. By default, it returns the user input in form of a string.")
+
+
+
 
 
 
