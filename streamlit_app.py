@@ -1044,6 +1044,48 @@ You are an adult.
         st.subheader("Taking input in Python")
         st.write(" **Python input() function** is used to take user input. By default, it returns the user input in form of a string.")
         st.info("Syntax: input(prompt)")
+        st.write(" **How to Take Input in Python** ")
+        st.write("The code prompts the user to input their name, stores it in the variable “name”, and then prints a greeting message addressing the user by their entered name.")
+        st.text("Input")
+        code17 = """
+name = input("Enter your name: ")
+print("Hello,", name, "! Welcome!")
+"""
+        st.code(code17, language="python")
+        st.output("Output")
+        code18 = """
+Enter your name: BasicsLearn\n
+Hello, BasicsLearn ! Welcome!
+"""
+        st.success(code18)
+        st.write(" **How to Change the Type of Input in Python** ")
+        st.write("By default input() function helps in taking user input as string. If any user wants to take input as int or float, we just need to typecast it.")
+        st.write(" **How to Print Names in Python** ")
+        st.write("The code prompts the user to input a string (the color of a rose), assigns it to the variable color, and then prints the inputted color.")
+        st.text("Input")
+        code19 = """
+# Taking input as string
+color = input("What color is rose?: ")
+print(color)
+"""
+        st.code(code19, language="python")
+        st.text("output")
+        code20 = """
+What color is rose?: Red\n
+Red
+"""
+        st.success(code20)
+        st.write(" **How to Print Numbers in Python** ")
+        st.write("The code prompts the user to input an integer representing the number of roses, converts the input to an integer using typecasting, and then prints the integer value.")
+        st.text("Input")
+        code21 = """
+# Taking input as int
+# Typecasting to int
+n = int(input("How many roses?: "))
+print(n)
+"""
+        st.code(code21, language="python")
+        
 
 
 
