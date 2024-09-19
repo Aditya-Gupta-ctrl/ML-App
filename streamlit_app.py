@@ -1260,7 +1260,55 @@ In Python, the comparison operators have lower precedence than the arithmetic op
 """)
         st.subheader("3. Logical Operators in Python")
         st.write("Python Logical operators perform Logical AND, Logical OR, and Logical NOT operations. It is used to combine conditional statements.")
+        data2 = {'Operator': ['and', 'or', 'not'], 
+                'Description': ['Logical AND: True if both the operands are true', 'Logical OR: True if either of the operands is true', 'Logical NOT: True if the operand is false'], 
+                'Syntax': ['x and y', 'x or y', 'not x']}
+        df2 = pd.DataFrame(data2)
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.table(df2)
+        st.write(" **Example of Logical Operators in Python** ")
+        st.text("Input")
+        code5 = """
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)
+"""
+        st.code(code5, language="python")
+        st.text("Output")
+        code6 = """
+False\n
+True\n
+False
+"""
+        st.success(code6)
+        st.write(" **Precedence of Logical Operators in Python** ")
+        st.markdown("""
+The precedence of Logical Operators in Python is as follows:
+
+1. Logical not
+2. logical and
+3. logical or
+""")
+        st.subheader("Bitwise Operators in Python")
+        st.write("Python Bitwise operators act on bits and perform bit-by-bit operations. These are used to operate on binary numbers.")
+        data3 = {'Operator': ['&', '|', '~', '^', '>>', '<<'], 
+                'Description': ['Bitwise AND', 'Bitwise OR', 'Bitwise NOT', 'Bitwise XOR', 'Bitwise right shift', 'Bitwise left shift'], 
+                'Syntax': ['x & y', 'x | y', '~x', 'x ^ y', 'x>>', 'x<<']}
+        df3 = pd.DataFrame(data3)
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.table(df3)
+        st.write(" **Example of Logical Operators in Python** ")
+        st.text("Input")
         
+
+
+
+
+
 
 
 
