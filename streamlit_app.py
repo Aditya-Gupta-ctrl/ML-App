@@ -1463,9 +1463,28 @@ else:
 Hello! Welcome.
 """
         st.success(code19)
-        
+        st.write(" **Operator Associativity in Python** ")
+        st.markdown("""
+If an expression contains two or more operators with the same precedence then Operator Associativity is used to determine. It can either be Left to Right or from Right to Left.
 
+The following code shows how Operator Associativity in Python works:
 
-
-
+**Example:** The code showcases various mathematical operations. It calculates and prints the results of division and multiplication, addition and subtraction, subtraction within parentheses, and exponentiation. The code illustrates different mathematical calculations and their outcomes.
+""")
+        st.text("Input")
+        code20 = """
+print(100 / 10 * 10)
+print(5 - 2 + 3)
+print(5 - (2 + 3))
+print(2 ** 3 ** 2)
+"""
+        st.code(code20, langauge="python")
+        st.text("Output")
+        code21 = """
+100.0\n
+6\n
+0\n
+512
+"""
+        st.success(code21)
 
