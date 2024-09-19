@@ -1209,6 +1209,17 @@ print(p)
 6561
 """
         st.success(code2)
+        st.write(" **Precedence of Arithmetic Operators in Python**")
+        st.markdown("""
+The precedence of Arithmetic Operators in Python is as follows:
+
+1. P – Parentheses
+2. E – Exponentiation
+3. M – Multiplication (Multiplication and division have the same precedence)
+4. D – Division
+5. A – Addition (Addition and subtraction have the same precedence)
+6. S – Subtraction
+""")
         st.subheader("2. Comparison of Python Operators")
         st.write("In Python Comparison of Relational operators compares the values. It either returns True or False according to the condition.")
         data1 = {'Operator': ['>', '<', '==', '!=', '>=', '<='], 
@@ -1218,6 +1229,7 @@ print(p)
         col1, col2 = st.columns([3, 1])
         with col1:
             st.table(df1)
+        
 
 
 
