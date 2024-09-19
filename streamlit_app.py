@@ -79,7 +79,7 @@ if selecteds == 1:
                 sac.MenuItem('Input and Output'),
                 sac.MenuItem('Data Types'),
                 sac.MenuItem('Operators'),
-                sac.MenuItem('Control Flow'),
+                sac.MenuItem('Conditional Statement'),
                 sac.MenuItem('Loops'),
                 sac.MenuItem('Function'),
             ]),
