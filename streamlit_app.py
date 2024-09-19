@@ -1209,7 +1209,15 @@ print(p)
 6561
 """
         st.success(code2)
-
+        st.subheader("2. Comparison of Python Operators")
+        st.write("In Python Comparison of Relational operators compares the values. It either returns True or False according to the condition.")
+        data1 = {'Operator': ['>', '<', '==', '!=', '>=', '<='], 
+                'Description': ['Greater than: True if the left operand is greater than the right', 'Less than: True if the left operand is less than the right', 'Equal to: True if both operands are equal', 'Not equal to – True if operands are not equal', 'Greater than or equal to True if the left operand is greater than or equal to the right', 'Less than or equal to True if the left operand is less than or equal to the right'], 
+                'Syntax': ['x > y', 'x < y', 'x == y', 'x != y', 'x >= y', 'x <= y']}
+        df1 = pd.DataFrame(data1)
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.table(df1)
 
 
 
