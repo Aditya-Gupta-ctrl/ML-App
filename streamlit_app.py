@@ -1139,7 +1139,7 @@ print(type(f))
         st.success(code26)
         
 
-    if selected == 6:
+    if selected == 8:
         st.header("Python Operators")
         st.write("In Python programming, Operators in general are used to perform operations on values and variables. These are standard symbols used for logical and arithmetic operations. In this article, we will look into different types of Python operators.")
         st.markdown("""
