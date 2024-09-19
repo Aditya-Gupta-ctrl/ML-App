@@ -3,7 +3,7 @@
 
 import streamlit as st
 import streamlit_antd_components as sac
-
+import pandas as pd
 
 # Set page config
 st.set_page_config(
@@ -1157,9 +1157,10 @@ print(type(f))
 """)
         image_url = "https://media.geeksforgeeks.org/wp-content/uploads/20240430181610/Operators-in-python.webp"
         st.image(image_url, width=800)
-        st.subheader("1.Arithmetic Operators in Python")
+        st.subheader("1. Arithmetic Operators in Python")
+        st.write("Python Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, and division.")
+        st.write("In Python 3.x the result of division is a floating-point while in Python 2.x division of 2 integers was an integer. To obtain an integer result in Python 3.x floored (// integer) is used.")
         
-
 
 
 
