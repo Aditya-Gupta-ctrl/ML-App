@@ -1164,7 +1164,6 @@ print(type(f))
                 'Description': ['Addition: adds two operands', 'Subtraction: subtracts two operands', 'Multiplication: multiplies two operands', 'Division (float): divides the first operand by the second', 'Division (floor): divides the first operand by the second', 'Modulus: returns the remainder when the first operand is divided by the second', 'Power: Returns first raised to power second'], 
                 'Syntax': ['x + y', 'x - y', 'x * y', 'x / y', 'x // y', 'x % y', 'x ** y']}
         df = pd.DataFrame(data)
-        st.write(df)
         st.table(df, width=500)
 
 
