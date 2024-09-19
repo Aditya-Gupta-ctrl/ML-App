@@ -1165,7 +1165,7 @@ print(type(f))
                 'Syntax': ['x + y', 'x - y', 'x * y', 'x / y', 'x // y', 'x % y', 'x ** y']}
         df = pd.DataFrame(data)
         st.write(df)
-
+        st.table(df, width=500)
 
 
 
