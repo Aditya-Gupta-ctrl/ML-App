@@ -1372,8 +1372,8 @@ print(b)
         st.subheader("6. Identity Operators in Python")
         st.write("In Python, is and is not are the identity operators both are used to check if two values are located on the same part of the memory. Two variables that are equal do not imply that they are identical")
         code11 = """
-is          #True if the operands are identical 
-is not      #True if the operands are not identical 
+is    \t      #True if the operands are identical \n
+is not    \t  #True if the operands are not identical 
 """
         st.info(code11)
         st.write(" **Example of Identity Operators in Python** ")
@@ -1396,8 +1396,8 @@ True
         st.subheader("Membership Operators in Python")
         st.write("In Python, in and not in are the membership operators that are used to test whether a value or variable is in a sequence.")
         code14 = """
-in            #True if value is found in the sequence
-not in        #True if value is not found in the sequence
+in       \t     #True if value is found in the sequence\n
+not in    \t    #True if value is not found in the sequence
 """
         st.info(code14)
         st.write(" **Example of Menbership Operators in Python** ")
