@@ -1192,11 +1192,23 @@ p = a ** b
 print(add)
 print(sub)
 print(mul)
+print(floatdiv)
+print(floordiv)
 print(mod)
 print(p)
 """
         st.code(code1, language="python")
-            
+        st.text("Output")
+        code2 =  """
+13\n
+5\n
+36\n
+2.25\n
+2\n
+1\n
+6561
+"""
+        st.success(code2)
 
 
 
