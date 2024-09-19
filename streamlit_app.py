@@ -1473,6 +1473,7 @@ The following code shows how Operator Associativity in Python works:
                 "Operators": ["()", "x[index], x[index:index]", "await x", "**", "+x, -x, ~x", "*, @, /, //, %", "+, –", "<<, >>", "&", "^", "|", "in, not in, is, is not, <, <=, >, >=, !=, =", "not x", "and", "or", "if-else", "lambda", ":="],
                 "Description": ["Parentheses", "Subscription, slicing", "Await expression", "Exponentiation", "Positive, negative, bitwise NOT", "Multiplication, matrix, division, floor division, remainder", "Addition and subtraction", "Shifts", "Bitwise AND", "Bitwise XOR", "Bitwise OR", "Comparisons, membership tests, identity tests", "Boolean NOT", "Boolean AND", "Boolean OR", "Conditional expression", "Lambda expression", "Assignment expression (walrus operator)"],
                 "Associativity": ["Left to right", "Left to right", "N/A", "Right to left", "Right to left", "Left to right", "Left to right", "Left to right", "Left to right", "Left to right", "Left to right", "Left to Right", "Right to left", "Left to right", "Left to right", "Right to left", "N/A", "Right to left"]}
+        df5 = pd.DataFrame(data5)
         col1, col2 = st.columns([3, 1])
         with col1:
             st.table(df5)
