@@ -1427,10 +1427,18 @@ y is present in given list
         st.subheader("Ternary Operator in Python")
         st.write("in Python, Ternary operators also known as conditional expressions are operators that evaluate something based on a condition being true or false. It was added to Python in version 2.5. ")
         st.write("It simply allows testing a condition in a single line replacing the multiline if-else making the code compact.")
-        
+        st.info("Syntax :  [on_true] if [expression] else [on_false] ")
+        st.write(" **Examples of Ternary Operator in Python** ")
+        st.text("Input")
+        code17 = """
+a, b = 10, 20
+min = a if a < b else b
 
-
-
+print(min)
+"""
+        st.code(code17, language="python")
+        st.text("Output")
+        st.success("10")
 
 
 
