@@ -1501,3 +1501,13 @@ print(2 ** 3 ** 2)
 
     if selected == 9:
         st.header("Conditional Statements in Python")
+        st.write("Conditional Statements are statements in Python that provide a choice for the control flow based on a condition. It means that the control flow of the Python program will be decided based on the outcome of the condition. Now let us see how Conditional Statements are implemented in Python.")
+        st.markdown("""
+Types of Conditional Statements in Python
+1. If Conditional Statement in Python
+2. If else Conditional Statements in Python
+3. Nested if..else Conditional Statements in Python
+4. If-elif-else Conditional Statements in Python
+5. Ternary Expression Conditional Statements in Python
+Best Practices for Using Conditional Statements
+""")
