@@ -1424,11 +1424,10 @@ x is NOT present in given list\n
 y is present in given list
 """
         st.success(code16)
+        st.subheader("Ternary Operator in Python")
+        st.write("in Python, Ternary operators also known as conditional expressions are operators that evaluate something based on a condition being true or false. It was added to Python in version 2.5. ")
+        st.write("It simply allows testing a condition in a single line replacing the multiline if-else making the code compact.")
         
-
-
-
-
 
 
 
