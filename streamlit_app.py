@@ -1342,7 +1342,7 @@ The precedence of Bitwise Operators in Python is as follows:
                 'Syntax': ['x = y + z', 'a+=b     a=a+b', 'a-=b     a=a-b', 'a*=b     a=a*b', 'a/=b     a=a/b', 'a%=b     a=a%b', 'a//=b     a=a//b', 'a**=b     a=a**b', 'a&=b     a=a&b', 'a|=b     a=a|b', 'a^=b     a=a^b', 'a>>=b     a=a>>b', 'a <<= b     a= a << b']}
         df4 = pd.DataFrame(data4)
         col1, col2 = st.columns([3, 1])
-        with col4:
+        with col1:
             st.table(df4)
         st.write(" **Example of Assignment Operators in Python** ")
         st.text("Input")
