@@ -1292,7 +1292,7 @@ The precedence of Logical Operators in Python is as follows:
 2. logical and
 3. logical or
 """)
-        st.subheader("Bitwise Operators in Python")
+        st.subheader("4. Bitwise Operators in Python")
         st.write("Python Bitwise operators act on bits and perform bit-by-bit operations. These are used to operate on binary numbers.")
         data3 = {'Operator': ['&', '|', '~', '^', '>>', '<<'], 
                 'Description': ['Bitwise AND', 'Bitwise OR', 'Bitwise NOT', 'Bitwise XOR', 'Bitwise right shift', 'Bitwise left shift'], 
@@ -1301,9 +1301,94 @@ The precedence of Logical Operators in Python is as follows:
         col1, col2 = st.columns([3, 1])
         with col1:
             st.table(df3)
-        st.write(" **Example of Logical Operators in Python** ")
+        st.write(" **Example of Bitwise Operators in Python** ")
         st.text("Input")
-        
+        code7 = """
+a = 10
+b = 4
+print(a & b)
+print(a | b)
+print(~a)
+print(a ^ b)
+print(a >> 2)
+print(a << 2)
+"""
+        st.code(code7, language="python")
+        st.text("Ouput")
+        code8 = """
+0\n
+14\n
+-11\n
+14\n
+2\n
+40
+"""
+        st.success(code8)
+        st.markdown("""
+**Precedence of Bitwise Operators in Python**
+
+The precedence of Bitwise Operators in Python is as follows:
+
+1. Bitwise NOT
+2. Bitwise Shift
+3. Bitwise AND
+4. Bitwise XOR
+5. Bitwise OR)
+""")
+        st.subheader("5. Assignment Operators in Python")
+        st.write("Python Assignment operators are used to assign values to the variables.")
+        data4 = {'Operator': ['=', '+=', '-=', '*=', '/=', '%=', '//=', '**=', '&=', '|=' ,'^=' , '>>=', '<<='], 
+                'Description': ['Assign the value of the right side of the expression to the left side operand', 'Add AND: Add right-side operand with left-side operand and then assign to left operand', 'Subtract AND: Subtract right operand from left operand and then assign to left operand', 'Multiply AND: Multiply right operand with left operand and then assign to left operand', 'Divide AND: Divide left operand with right operand and then assign to left operand', 'Modulus AND: Takes modulus using left and right operands and assign the result to left operand', 'Divide(floor) AND: Divide left operand with right operand and then assign the value(floor) to left operand', 'Exponent AND: Calculate exponent(raise power) value using operands and assign value to left operand', 'Performs Bitwise AND on operands and assign value to left operand', 'Performs Bitwise OR on operands and assign value to left operand', 'Performs Bitwise xOR on operands and assign value to left operand', '	Performs Bitwise right shift on operands and assign value to left operand', 'Performs Bitwise left shift on operands and assign value to left operand'], 
+                'Syntax': ['x = y + z', 'a+=b     a=a+b', 'a-=b     a=a-b', 'a*=b     a=a*b', 'a/=b     a=a/b', 'a%=b     a=a%b', 'a//=b     a=a//b', 'a**=b     a=a**b', 'a&=b     a=a&b', 'a|=b     a=a|b', 'a^=b     a=a^b', 'a>>=b     a=a>>b', 'a <<= b     a= a << b']}
+        df4 = pd.DataFrame(data4)
+        col1, col2 = st.columns([3, 1])
+        with col4:
+            st.table(df4)
+        st.write(" **Example of Assignment Operators in Python** ")
+        st.text("Input")
+        code9 = """
+a = 10
+b = a
+print(b)
+b += a
+print(b)
+b -= a
+print(b)
+b *= a
+print(b)
+b <<= a
+print(b)
+"""
+        st.code(code9, language='python')
+        st.text("Output")
+        code10 = """
+10\n
+20\n
+10\n
+100\n
+102400
+"""
+        st.success(code10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
