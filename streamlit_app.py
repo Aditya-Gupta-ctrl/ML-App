@@ -1147,7 +1147,7 @@ print(type(f))
 * **OPERAND:** It is the value on which the operator is applied.
 """)
         st.subheader("Types of Operators in Python")
-        st.mrakdown("""
+        st.markdown("""
 1. Arithmetic Operators
 2. Comparison Operators
 3. Logical Operators
