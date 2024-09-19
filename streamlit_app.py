@@ -1468,9 +1468,17 @@ Hello! Welcome.
 If an expression contains two or more operators with the same precedence then Operator Associativity is used to determine. It can either be Left to Right or from Right to Left.
 
 The following code shows how Operator Associativity in Python works:
-
-**Example:** The code showcases various mathematical operations. It calculates and prints the results of division and multiplication, addition and subtraction, subtraction within parentheses, and exponentiation. The code illustrates different mathematical calculations and their outcomes.
 """)
+        data5 = {"Precedence": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+                "Operators": ["()", "x[index], x[index:index]", "await x", "**", "+x, -x, ~x", "*, @, /, //, %", "+, –", "<<, >>", "&", "^", "|", "in, not in, is, is not, <, <=, >, >=, !=, =", "not x", "and", "or", "if-else", "lambda", ":="],
+                "Description": ["Parentheses", "Subscription, slicing", "Await expression", "Exponentiation", "Positive, negative, bitwise NOT", "Multiplication, matrix, division, floor division, remainder", "Addition and subtraction", "Shifts", "Bitwise AND", "Bitwise XOR", "Bitwise OR", "Comparisons, membership tests, identity tests", "Boolean NOT", "Boolean AND", "Boolean OR", "Conditional expression", "Lambda expression", "Assignment expression (walrus operator)"],
+                "Associativity": ["Left to right", "Left to right", "N/A", "Right to left", "Right to left", "Left to right", "Left to right", "Left to right", "Left to right", "Left to right", "Left to right", "Left to Right", "Right to left", "Left to right", "Left to right", "Right to left", "N/A", "Right to left"]}
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.table(df5)
+        st.markdown("""
+**Example:** The code showcases various mathematical operations. It calculates and prints the results of division and multiplication, addition and subtraction, subtraction within parentheses, and exponentiation. The code illustrates different mathematical calculations and their outcomes.
+"")
         st.text("Input")
         code20 = """
 print(100 / 10 * 10)
