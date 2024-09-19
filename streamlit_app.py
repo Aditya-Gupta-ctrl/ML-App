@@ -1229,9 +1229,38 @@ The precedence of Arithmetic Operators in Python is as follows:
         col1, col2 = st.columns([3, 1])
         with col1:
             st.table(df1)
+        st.write(" **Example of Comparison Operators in Python** ")
+        st.text("Input")
+        code3 = """
+a = 13
+b = 33
+
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+print(a >= b)
+print(a <= b)
+"""
+        st.code(code3, language="python")
+        st.text("Output")
+        code4 = """
+False\n
+True\n
+False\n
+True\n
+False\n
+True
+"""
+        st.success(code4)
+        st.markdown("""
+**Precedence of Comparison Operators in Python**
+
+In Python, the comparison operators have lower precedence than the arithmetic operators. All the operators within comparison operators have the same precedence order.
+""")
+        st.subheader("3. Logical Operators in Python")
+        st.write("Python Logical operators perform Logical AND, Logical OR, and Logical NOT operations. It is used to combine conditional statements.")
         
-
-
 
 
 
