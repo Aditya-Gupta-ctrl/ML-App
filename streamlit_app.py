@@ -1439,9 +1439,31 @@ print(min)
         st.code(code17, language="python")
         st.text("Output")
         st.success("10")
+        st.subheader("Precedence and Associativity of Operators in Python")
+        st.write("In Python, Operator precedence and associativity determine the priorities of the operator.")
+        st.write(" **Operator Precedence in Python** ")
+        st.write("This is used in an expression with more than one operator with different precedence to determine which operation to perform first")
+        st.write(" **Example:** The code first calculates and prints the value of the expression 10 + 20 * 30, which is 610. Then, it checks a condition based on the values of the ‘name’ and ‘age’ variables. Since the name is “Alex” and the condition is satisfied using the or operator, it prints “Hello! Welcome.” ")
+        st.text("Input")
+        code18 = """
+expr = 10 + 20 * 30
+print(expr)
+name = "Alex"
+age = 0
 
-
-
+if name == "Alex" or name == "John" and age >= 2:
+    print("Hello! Welcome.")
+else:
+    print("Good Bye!!")
+"""
+        st.code(code18, language="python")
+        st.text("Output")
+        code19 = """
+610\n
+Hello! Welcome.
+"""
+        st.success(code19)
+        
 
 
 
