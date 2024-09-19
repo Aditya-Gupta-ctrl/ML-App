@@ -1167,9 +1167,36 @@ print(type(f))
         col1, col2 = st.columns([3, 1])
         with col1:
             st.table(df)
+            st.write("  **Example of Arithmetic Operators in Python** ")
+            st.text("Input")
+        code1 = """
+a = 9
+b = 4
 
+#Operators
+add = a + b
 
+sub = a - b
 
+mul = a * b
+
+floatdiv = a / b
+
+floordiv = a // b
+
+mod = a % b
+
+p = a ** b
+
+#Execution
+print(add)
+print(sub)
+print(mul)
+print(mod)
+print(p)
+"""
+        st.code(code1, language="python")
+            
 
 
 
