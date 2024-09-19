@@ -1396,7 +1396,7 @@ True
         st.subheader("Membership Operators in Python")
         st.write("In Python, in and not in are the membership operators that are used to test whether a value or variable is in a sequence.")
         code14 = """
-in       \t     #True if value is found in the sequence\n
+in       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     #True if value is found in the sequence\n
 not in    \t    #True if value is not found in the sequence
 """
         st.info(code14)
