@@ -1160,8 +1160,14 @@ print(type(f))
         st.subheader("1. Arithmetic Operators in Python")
         st.write("Python Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, and division.")
         st.write("In Python 3.x the result of division is a floating-point while in Python 2.x division of 2 integers was an integer. To obtain an integer result in Python 3.x floored (// integer) is used.")
+        # Create a sample DataFrame
+        data = {'Name': ['John', 'Mary', 'David'], 
+                'Age': [25, 31, 42], 
+                'Score': [90, 80, 95]}
+        df = pd.DataFrame(data)
         
-
+        # Create a table in Streamlit using st.write
+        st.write(df)
 
 
 
