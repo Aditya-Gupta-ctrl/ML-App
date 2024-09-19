@@ -1138,3 +1138,37 @@ print(type(f))
 """
         st.success(code26)
         
+
+    if selected == 6:
+        st.header("Python Operators")
+        st.write("In Python programming, Operators in general are used to perform operations on values and variables. These are standard symbols used for logical and arithmetic operations. In this article, we will look into different types of Python operators.")
+        st.markdown("""
+* **OPERATORS:** These are the special symbols. Eg- + , * , /, etc.
+* **OPERAND:** It is the value on which the operator is applied.
+""")
+        st.subheader("Types of Operators in Python")
+        st.mrakdown("""
+1. Arithmetic Operators
+2. Comparison Operators
+3. Logical Operators
+4. Bitwise Operators
+5. Assignment Operators
+6. Identity Operators and Membership Operators
+""")
+        image_url = "https://media.geeksforgeeks.org/wp-content/uploads/20240430181610/Operators-in-python.webp"
+        st.image(image_url, width=800)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
