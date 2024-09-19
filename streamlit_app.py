@@ -1511,3 +1511,5 @@ Types of Conditional Statements in Python
 5. Ternary Expression Conditional Statements in Python
 Best Practices for Using Conditional Statements
 """)
+        st.subheader("1. If Conditional Statement in Python")
+        st.write("")
