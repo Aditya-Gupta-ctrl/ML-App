@@ -1478,7 +1478,7 @@ The following code shows how Operator Associativity in Python works:
             st.table(df5)
         st.markdown("""
 **Example:** The code showcases various mathematical operations. It calculates and prints the results of division and multiplication, addition and subtraction, subtraction within parentheses, and exponentiation. The code illustrates different mathematical calculations and their outcomes.
-"")
+""")
         st.text("Input")
         code20 = """
 print(100 / 10 * 10)
