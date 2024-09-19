@@ -1478,7 +1478,7 @@ print(5 - 2 + 3)
 print(5 - (2 + 3))
 print(2 ** 3 ** 2)
 """
-        st.code(code20, langauge="python")
+        st.code(code20, language="python")
         st.text("Output")
         code21 = """
 100.0\n
