@@ -1157,9 +1157,8 @@ print(type(f))
 """)
         image_url = "https://media.geeksforgeeks.org/wp-content/uploads/20240430181610/Operators-in-python.webp"
         st.image(image_url, width=800)
-
-
-
+        st.subheader("1.Arithmetic Operators in Python")
+        
 
 
 
