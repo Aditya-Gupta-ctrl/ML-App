@@ -1547,8 +1547,16 @@ else:\n
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# condition is false
 """
         st.info(code4)
-
-
+        st.text("Input")
+        code5 = """
+# if..else statement example
+x = 3
+if x == 4:
+    print("Yes")
+else:
+    print("No")
+"""
+        st.code(code5, language="python")
 
 
 
