@@ -1535,8 +1535,18 @@ print("Program ended")
 Program ended
 """
         st.success(code3)
-
-
+        st.subheader("2. If else Conditional Statements in Python")
+        st.write("In a conditional if Statement the additional block of code is merged as an else statement which is performed when if condition is false.")
+        st.write(" **Syntax of Python If-Else:** ")
+        code4 = """
+if (condition):\n
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Executes this block if\n
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# condition is true\n
+else:\n
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Executes this block if\n
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# condition is false
+"""
+        st.info(code3)
 
 
 
