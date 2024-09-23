@@ -1529,6 +1529,16 @@ if 10 > 5:
 print("Program ended")
 """
         st.code(code2, language="python")
+        st.text("Output")
+        code3 = """
+10 greater than 5\n
+Program ended
+"""
+        st.success(code3)
+
+
+
+
 
 
 
