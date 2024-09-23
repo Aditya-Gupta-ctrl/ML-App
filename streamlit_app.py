@@ -1512,4 +1512,11 @@ Types of Conditional Statements in Python
 Best Practices for Using Conditional Statements
 """)
         st.subheader("1. If Conditional Statement in Python")
-        st.write("")
+        st.write("If the simple code of block is to be performed if the condition holds then the if statement is used. Here the condition mentioned holds then the code of the block runs otherwise not.")
+        st.write(" **Syntax of If Statement:** ")
+        code1 = """
+if condition:
+    # Statements to execute if
+    # condition is true
+"""
+        st.info(code1)
