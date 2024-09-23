@@ -1520,3 +1520,16 @@ if condition:\n
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# condition is true
 """
         st.info(code1)
+        st.text("Input")
+        code2 = """
+# if statement example
+if 10 > 5:
+    print("10 greater than 5")
+
+print("Program ended")
+"""
+        st.code(code2, language="python")
+
+
+
+
