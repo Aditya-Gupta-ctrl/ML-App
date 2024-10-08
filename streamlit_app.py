@@ -1610,7 +1610,7 @@ else:
         st.write("The Python ternary Expression determines if a condition is true or false and then returns the appropriate value in accordance with the result. The ternary Expression is useful in cases where we need to assign a value to a variable based on a simple condition, and we want to keep our code more concise — all in just one line of code.")
         st.write(" **Syntax of Ternary Expression** ")
         code8 = """
-Syntax: [on_true] if [expression] else [on_false]
+Syntax: [on_true] if [expression] else [on_false] \n
 expression: conditional_expression | lambda_expr
 """
         st.info(code8)
