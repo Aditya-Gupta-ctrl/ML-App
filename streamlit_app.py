@@ -1559,7 +1559,76 @@ else:
         st.code(code5, language="python")
         st.text("Output")
         st.success("No")
+        st.subheader("3. Nested if..else Conditional Statements in Python")
+        st.write("Nested if..else means an if-else statement inside another if statement. Or in simple words first, there is an outer if statement, and inside it another if – else statement is present and such type of statement is known as nested if statement. We can use one if or else if statement inside another if or else if statements.")
+        st.text("Input")
+        code6 = """
+# if..else chain statement
+letter = "A"
+
+if letter == "B":
+    print("letter is B")
+
+else:
+
+    if letter == "C":
+        print("letter is C")
+
+    else:
+
+        if letter == "A":
+            print("letter is A")
+
+        else:
+            print("letter isn't A, B and C")
+"""
+        st.code(code6,language="python")
+        st.text("Output")
+        st.success("letter is A")
+        st.subheader("4. If-elif-else Conditional Statements in Python")
+        st.write("The if statements are executed from the top down. As soon as one of the conditions controlling the if is true, the statement associated with that if is executed, and the rest of the ladder is bypassed. If none of the conditions is true, then the final “else” statement will be executed.")
+        st.text("Input")
+        code7 = """
+# if-elif statement example
+letter = "A"
+
+if letter == "B":
+    print("letter is B")
+
+elif letter == "C":
+    print("letter is C")
+
+elif letter == "A":
+    print("letter is A")
+
+else:
+    print("letter isn't A, B or C")
+"""
+        st.code(code7, language="python")
+        st.success("letter is A")
+        st.subheader("5. Ternary Expression Conditional Statements in Python")
+        st.write("The Python ternary Expression determines if a condition is true or false and then returns the appropriate value in accordance with the result. The ternary Expression is useful in cases where we need to assign a value to a variable based on a simple condition, and we want to keep our code more concise — all in just one line of code.")
+        st.write(" **Syntax of Ternary Expression** ")
+        code8 = """
+Syntax: [on_true] if [expression] else [on_false]
+expression: conditional_expression | lambda_expr
+"""
+        st.info(code8)
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
